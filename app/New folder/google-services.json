@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319337310374",
+    "project_id": "shreya-academy",
+    "storage_bucket": "shreya-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319337310374:android:8d31fc0e2970c875756c67",
+        "android_client_info": {
+          "package_name": "com.shreya_scademy.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319337310374-bjafro9e5ai17a1ipk3kb32v0049atts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwdnb6x8zDJ7r3n3hzBL53rwrml2hTiaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319337310374-bjafro9e5ai17a1ipk3kb32v0049atts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlSignup"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchBarEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:background="@drawable/login_edit_grad"
+                android:drawableEnd="@drawable/ic_baseline_search_24"
+                android:elevation="@dimen/_6sdp"
+                android:hint="@string/search"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/text_color" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgBtnContact"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_contact_24"
+                android:padding="8dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@null"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/noResultIv"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/noresults"
+            android:visibility="gone" />
+
+        <com.shreya_scademy.app.utils.widgets.CustomSmallText
+            android:id="@+id/refreshTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:drawableTop="@drawable/ic_refresh_24"
+            android:gravity="center"
+            android:padding="@dimen/_16sdp"
+            android:text="@string/Try_again_server_issue"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="gone" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:layout_centerInParent="true"
+            android:background="@drawable/back_curve_grey">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlSignup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back_splash_grad"
+        android:padding="@dimen/_1sdp">
+
+        <LinearLayout
+            android:id="@+id/btnSignup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:gravity="center"
+                android:padding="@dimen/_1sdp"
+
+                android:src="@drawable/signin"
+
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Signup"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/tvMove"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_home_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="@color/white"
+
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/loginTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_19sdp"
+                android:gravity="center"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/ic_baseline_login_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/LOGIN"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

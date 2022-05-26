@@ -1,0 +1,1336 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.shreya_scademy.app"
+4    android:versionCode="12"
+5    android:versionName="1.0.12" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:6:5-67
+11-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:6:22-64
+12
+13    <uses-feature
+13-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:8:5-10:35
+14        android:name="android.hardware.camera.any"
+14-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:9:9-51
+15        android:required="true" />
+15-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:10:9-32
+16    <uses-feature
+16-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:11:5-13:36
+17        android:name="android.hardware.camera.autofocus"
+17-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:12:9-57
+18        android:required="false" />
+18-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:13:9-33
+19
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:15:5-79
+20-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:15:22-76
+21    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+21-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:16:5-79
+21-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:16:22-76
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:6:5-67
+22-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:6:22-64
+23    <uses-permission android:name="android.permission.CAMERA" />
+23-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:18:5-65
+23-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:18:22-62
+24    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+24-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:19:5-80
+24-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:19:22-77
+25    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+25-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:20:5-81
+25-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:20:22-78
+26    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+26-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:21:5-23:47
+26-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:22:9-62
+27    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+27-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:24:5-75
+27-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:24:22-72
+28    <uses-permission android:name="android.permission.GET_TASKS" />
+28-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:25:5-68
+28-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:25:22-65
+29
+30    <uses-feature
+30-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:11:5-54
+31        android:glEsVersion="0x00020000"
+31-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:11:19-51
+32        android:required="true" />
+32-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d19bbc1e877343eb38dfc3d8adaa513f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+33    <uses-feature
+33-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:12:5-14:36
+34        android:name="android.hardware.camera"
+34-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:13:9-47
+35        android:required="false" />
+35-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:14:9-33
+36    <uses-feature
+36-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:18:5-20:36
+37        android:name="android.hardware.telephony"
+37-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:19:9-50
+38        android:required="false" />
+38-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:20:9-33
+39    <uses-feature
+39-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:21:5-23:36
+40        android:name="android.hardware.bluetooth"
+40-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:22:9-50
+41        android:required="false" />
+41-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:23:9-33
+42    <uses-feature
+42-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:24:5-26:36
+43        android:name="android.hardware.microphone"
+43-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:25:9-51
+44        android:required="false" />
+44-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:26:9-33
+45
+46    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+46-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:32:5-76
+46-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:32:22-73
+47    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+47-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:33:5-80
+47-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:33:22-77
+48    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+48-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:34:5-71
+48-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:34:22-68
+49    <uses-permission android:name="android.permission.BLUETOOTH" />
+49-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:36:5-68
+49-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:36:22-65
+50    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+50-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:37:5-74
+50-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:37:22-71
+51    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+51-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:38:5-75
+51-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:38:22-72
+52    <uses-permission android:name="android.permission.WAKE_LOCK" />
+52-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:39:5-68
+52-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:39:22-65
+53    <uses-permission android:name="android.permission.CALL_PHONE" />
+53-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:40:5-69
+53-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:40:22-66
+54    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+54-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:41:5-78
+54-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:41:22-75
+55    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+55-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:42:5-77
+55-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:42:22-74
+56
+57    <queries>
+57-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:11:5-37:15
+58        <intent>
+58-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:12:9-18:18
+59            <action android:name="android.intent.action.VIEW" />
+59-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:17-69
+59-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:25-66
+60
+61            <data
+61-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:17-75
+62                android:mimeType="*/*"
+63                android:scheme="*" />
+63-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:23-72
+64        </intent>
+65        <intent>
+65-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:19:9-28:18
+66            <action android:name="android.intent.action.VIEW" />
+66-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:17-69
+66-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:25-66
+67
+68            <category android:name="android.intent.category.BROWSABLE" />
+68-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:67:17-78
+68-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:67:27-75
+69
+70            <data
+70-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:17-75
+71                android:host="pay"
+72                android:mimeType="*/*"
+73                android:scheme="upi" />
+73-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:23-72
+74        </intent>
+75        <intent>
+75-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:29:9-31:18
+76            <action android:name="android.intent.action.MAIN" />
+76-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:276:17-69
+76-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:276:25-66
+77        </intent>
+78        <intent>
+78-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:32:9-36:18
+79            <action android:name="android.intent.action.SEND" />
+79-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:33:13-65
+79-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:33:21-62
+80
+81            <data android:mimeType="*/*" />
+81-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:17-75
+82        </intent>
+83    </queries> <!-- Required by older versions of Google Play services to create IID tokens -->
+84    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+84-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:26:5-82
+84-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:26:22-79
+85    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+85-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:26:5-110
+85-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:26:22-107
+86    <uses-permission android:name="android.permission.VIBRATE" />
+86-->[io.card:android-sdk:5.5.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e42628d9df08214e0f5e3d9abcfb4703\jetified-android-sdk-5.5.1\AndroidManifest.xml:10:5-66
+86-->[io.card:android-sdk:5.5.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e42628d9df08214e0f5e3d9abcfb4703\jetified-android-sdk-5.5.1\AndroidManifest.xml:10:22-63
+87
+88    <application
+88-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:27:5-322:19
+89        android:name="com.shreya_scademy.app.App"
+89-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:28:9-28
+90        android:allowBackup="true"
+90-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:29:9-35
+91        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+91-->[androidx.core:core:1.7.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3ed0baa4ab209000751f98657b7f9795\core-1.7.0\AndroidManifest.xml:24:18-86
+92        android:debuggable="true"
+93        android:hardwareAccelerated="true"
+93-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:30:9-43
+94        android:icon="@mipmap/ic_launcher_foreground"
+94-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:31:9-54
+95        android:label="@string/app_name"
+95-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:32:9-41
+96        android:largeHeap="true"
+96-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:33:9-33
+97        android:requestLegacyExternalStorage="true"
+97-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:34:9-52
+98        android:resizeableActivity="false"
+98-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:35:9-43
+99        android:roundIcon="@mipmap/ic_launcher_foreground"
+99-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:36:9-59
+100        android:supportsRtl="true"
+100-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:37:9-35
+101        android:theme="@style/AppTheme"
+101-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:38:9-40
+102        android:usesCleartextTraffic="true" >
+102-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:39:9-44
+103        <activity
+103-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:41:9-43:40
+104            android:name="com.shreya_scademy.app.ui.login.StaffLogin"
+104-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:42:13-48
+105            android:exported="false" />
+105-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:43:13-37
+106        <activity
+106-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:44:9-46:40
+107            android:name="com.shreya_scademy.app.ui.batch.LeaveCommentActivity"
+107-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:45:13-58
+108            android:exported="false" />
+108-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:46:13-37
+109
+110        <meta-data
+110-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:48:9-50:55
+111            android:name="com.facebook.sdk.ApplicationId"
+111-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:49:13-58
+112            android:value="@string/facebook_app_id" />
+112-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:50:13-52
+113        <meta-data
+113-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:51:9-53:61
+114            android:name="com.facebook.sdk.ClientToken"
+114-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:52:13-56
+115            android:value="@string/facebook_client_token" />
+115-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:53:13-58
+116
+117        <activity
+117-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:55:9-59:48
+118            android:name="com.facebook.FacebookActivity"
+118-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:56:13-57
+119            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+119-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:57:13-96
+120            android:exported="false"
+120-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:58:13-37
+121            android:label="@string/app_name"
+121-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:59:13-45
+122            android:theme="@style/com_facebook_activity_theme" />
+122-->[com.facebook.android:facebook-common:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3eab1c8e091ea6f6c48daad46c5f1ac7\jetified-facebook-common-12.3.0\AndroidManifest.xml:33:13-63
+123        <activity
+123-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:60:9-71:20
+124            android:name="com.facebook.CustomTabActivity"
+124-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:61:13-58
+125            android:exported="true" >
+125-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:62:13-36
+126            <intent-filter>
+126-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:63:13-70:29
+127                <action android:name="android.intent.action.VIEW" />
+127-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:17-69
+127-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:25-66
+128
+129                <category android:name="android.intent.category.DEFAULT" />
+129-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:66:17-76
+129-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:66:27-73
+130                <category android:name="android.intent.category.BROWSABLE" />
+130-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:67:17-78
+130-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:67:27-75
+131
+132                <data android:scheme="@string/fb_login_protocol_scheme" />
+132-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:17-75
+132-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:23-72
+133            </intent-filter>
+134            <intent-filter>
+134-->[com.facebook.android:facebook-common:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3eab1c8e091ea6f6c48daad46c5f1ac7\jetified-facebook-common-12.3.0\AndroidManifest.xml:39:13-48:29
+135                <action android:name="android.intent.action.VIEW" />
+135-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:17-69
+135-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:64:25-66
+136
+137                <category android:name="android.intent.category.DEFAULT" />
+137-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:66:17-76
+137-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:66:27-73
+138                <category android:name="android.intent.category.BROWSABLE" />
+138-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:67:17-78
+138-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:67:27-75
+139
+140                <data
+140-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:17-75
+141                    android:host="cct.com.shreya_scademy.app"
+142                    android:scheme="fbconnect" />
+142-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:23-72
+143            </intent-filter>
+144        </activity>
+145        <activity
+145-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:72:9-76:76
+146            android:name="com.shreya_scademy.app.ui.batch.ActivityAllBatch"
+146-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:73:13-54
+147            android:exported="false"
+147-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:74:13-37
+148            android:screenOrientation="portrait"
+148-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:75:13-49
+149            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+149-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:76:13-73
+150        <activity
+150-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:77:9-80:52
+151            android:name="com.shreya_scademy.app.ui.syllabus.ActivitySyllabus"
+151-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:78:13-57
+152            android:exported="false"
+152-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:79:13-37
+153            android:screenOrientation="portrait" />
+153-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:80:13-49
+154        <activity
+154-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:81:9-84:52
+155            android:name="com.shreya_scademy.app.ui.certificate.ActivityCertificateAssigned"
+155-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:82:13-71
+156            android:exported="false"
+156-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:83:13-37
+157            android:screenOrientation="portrait" />
+157-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:84:13-49
+158        <activity
+158-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:85:9-89:76
+159            android:name="com.shreya_scademy.app.ui.multibatch.ActivityMyBatch"
+159-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:86:13-58
+160            android:exported="false"
+160-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:87:13-37
+161            android:screenOrientation="portrait"
+161-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:88:13-49
+162            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+162-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:89:13-73
+163        <activity
+163-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:90:9-93:52
+164            android:name="com.shreya_scademy.app.ui.paymentGateway.Razorpay"
+164-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:91:13-55
+165            android:exported="false"
+165-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:92:13-37
+166            android:screenOrientation="portrait" />
+166-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:93:13-49
+167        <activity
+167-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:94:9-97:52
+168            android:name="com.shreya_scademy.app.ui.library.ActivityPdf"
+168-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:95:13-51
+169            android:exported="false"
+169-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:96:13-37
+170            android:screenOrientation="portrait" />
+170-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:97:13-49
+171        <activity
+171-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:98:9-101:52
+172            android:name="com.shreya_scademy.app.ui.library.ActivityLibrary"
+172-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:99:13-55
+173            android:exported="false"
+173-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:100:13-37
+174            android:screenOrientation="portrait" />
+174-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:101:13-49
+175        <activity
+175-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:102:9-106:76
+176            android:name="com.shreya_scademy.app.ui.multibatch.ActivityMultiBatchHome"
+176-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:103:13-65
+177            android:exported="false"
+177-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:104:13-37
+178            android:screenOrientation="portrait"
+178-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:105:13-49
+179            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+179-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:106:13-73
+180        <activity
+180-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:107:9-110:52
+181            android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ActivityVimeoVideo"
+181-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:108:13-71
+182            android:exported="false"
+182-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:109:13-37
+183            android:screenOrientation="portrait" />
+183-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:110:13-49
+184        <activity
+184-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:111:9-114:52
+185            android:name="com.shreya_scademy.app.ui.forgotpassword.ActivityForgotPassword"
+185-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:112:13-69
+186            android:exported="false"
+186-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:113:13-37
+187            android:screenOrientation="portrait" />
+187-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:114:13-49
+188        <activity
+188-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:115:9-118:52
+189            android:name="com.shreya_scademy.app.ui.batch.ActivityBatchDetails"
+189-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:116:13-58
+190            android:exported="false"
+190-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:117:13-37
+191            android:screenOrientation="portrait" />
+191-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:118:13-49
+192        <activity
+192-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:119:9-123:76
+193            android:name="com.shreya_scademy.app.ui.batch.ActivityBatch"
+193-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:120:13-51
+194            android:exported="false"
+194-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:121:13-37
+195            android:screenOrientation="portrait"
+195-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:122:13-49
+196            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+196-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:123:13-73
+197        <activity
+197-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:124:9-127:52
+198            android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ExoplayerVideos"
+198-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:125:13-68
+199            android:exported="false"
+199-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:126:13-37
+200            android:screenOrientation="portrait" />
+200-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:127:13-49
+201        <activity
+201-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:128:9-132:76
+202            android:name="com.shreya_scademy.app.ui.signup.ActivitySignUp"
+202-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:129:13-53
+203            android:exported="false"
+203-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:130:13-37
+204            android:screenOrientation="portrait"
+204-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:131:13-49
+205            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+205-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:132:13-73
+206        <activity
+206-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:133:9-137:52
+207            android:name="com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway"
+207-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:134:13-69
+208            android:exported="false"
+208-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:135:13-37
+209            android:parentActivityName="com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway"
+209-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:136:13-83
+210            android:screenOrientation="portrait" />
+210-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:137:13-49
+211        <activity
+211-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:138:9-141:52
+212            android:name="com.shreya_scademy.app.ui.payment.ActivityPaymentHistory"
+212-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:139:13-62
+213            android:exported="false"
+213-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:140:13-37
+214            android:screenOrientation="portrait" />
+214-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:141:13-49
+215        <activity
+215-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:142:9-146:63
+216            android:name="com.shreya_scademy.app.ui.doubtClasses.ActivityDoubtClasses"
+216-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:143:13-65
+217            android:exported="false"
+217-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:144:13-37
+218            android:screenOrientation="portrait"
+218-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:145:13-49
+219            android:windowSoftInputMode="stateAlwaysHidden" />
+219-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:146:13-60
+220        <activity
+220-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:147:9-151:63
+221            android:name="com.shreya_scademy.app.ui.editProfile.ActivityProfile"
+221-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:148:13-59
+222            android:exported="false"
+222-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:149:13-37
+223            android:screenOrientation="portrait"
+223-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:150:13-49
+224            android:windowSoftInputMode="stateAlwaysHidden" />
+224-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:151:13-60
+225        <activity
+225-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:152:9-155:52
+226            android:name="com.shreya_scademy.app.ui.aboutapp.ActivityOpenSourceLibrary"
+226-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:153:13-66
+227            android:exported="false"
+227-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:154:13-37
+228            android:screenOrientation="portrait" />
+228-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:155:13-49
+229        <activity
+229-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:156:9-159:52
+230            android:name="com.shreya_scademy.app.ui.aboutapp.ActivityAboutApp"
+230-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:157:13-57
+231            android:exported="false"
+231-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:158:13-37
+232            android:screenOrientation="portrait" />
+232-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:159:13-49
+233        <activity
+233-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:160:9-163:52
+234            android:name="com.shreya_scademy.app.ui.settingdashboard.ActivitySettingDashboard"
+234-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:161:13-73
+235            android:exported="false"
+235-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:162:13-37
+236            android:screenOrientation="portrait" />
+236-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:163:13-49
+237        <activity
+237-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:164:9-168:63
+238            android:name="com.shreya_scademy.app.ui.applyleave.ActivityApplyLeave"
+238-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:165:13-61
+239            android:exported="false"
+239-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:166:13-37
+240            android:screenOrientation="portrait"
+240-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:167:13-49
+241            android:windowSoftInputMode="stateAlwaysHidden" />
+241-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:168:13-60
+242        <activity
+242-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:169:9-172:52
+243            android:name="com.shreya_scademy.app.ui.certificate.ActivityCertificate"
+243-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:170:13-63
+244            android:exported="false"
+244-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:171:13-37
+245            android:screenOrientation="portrait" />
+245-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:172:13-49
+246        <activity
+246-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:173:9-176:52
+247            android:name="com.shreya_scademy.app.ui.home.ActivityPrivacyPolicy"
+247-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:174:13-58
+248            android:exported="false"
+248-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:175:13-37
+249            android:screenOrientation="portrait" />
+249-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:176:13-49
+250        <activity
+250-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:177:9-180:52
+251            android:name="com.shreya_scademy.app.ui.attendance.ActivityAttendance"
+251-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:178:13-61
+252            android:exported="false"
+252-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:179:13-37
+253            android:screenOrientation="portrait" />
+253-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:180:13-49
+254        <activity
+254-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:181:9-184:52
+255            android:name="com.shreya_scademy.app.ui.academicrecord.ActivityAcademicRecord"
+255-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:182:13-69
+256            android:exported="false"
+256-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:183:13-37
+257            android:screenOrientation="portrait" />
+257-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:184:13-49
+258        <activity
+258-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:185:9-188:52
+259            android:name="com.shreya_scademy.app.ui.live.ActivityLive"
+259-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:186:13-49
+260            android:exported="false"
+260-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:187:13-37
+261            android:screenOrientation="portrait" />
+261-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:188:13-49
+262        <activity
+262-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:189:9-192:52
+263            android:name="com.shreya_scademy.app.ui.generatepapers.ActivityGetPapers"
+263-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:190:13-64
+264            android:exported="false"
+264-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:191:13-37
+265            android:screenOrientation="portrait" />
+265-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:192:13-49
+266        <activity
+266-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:193:9-196:52
+267            android:name="com.shreya_scademy.app.ui.assignment.ActivityAssignment"
+267-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:194:13-61
+268            android:exported="false"
+268-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:195:13-37
+269            android:screenOrientation="portrait" />
+269-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:196:13-49
+270        <activity
+270-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:197:9-200:52
+271            android:name="com.shreya_scademy.app.ui.paymentGateway.paypal"
+271-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:198:13-53
+272            android:exported="false"
+272-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:199:13-37
+273            android:screenOrientation="portrait" />
+273-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:200:13-49
+274        <activity
+274-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:201:9-204:52
+275            android:name="com.shreya_scademy.app.ui.extraclass.ActivityExtraClass"
+275-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:202:13-61
+276            android:exported="false"
+276-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:203:13-37
+277            android:screenOrientation="portrait" />
+277-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:204:13-49
+278        <activity
+278-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:205:9-208:55
+279            android:name="com.shreya_scademy.app.ui.video.ActivityYoutubeVideo"
+279-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:206:13-58
+280            android:exported="false"
+280-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:207:13-37
+281            android:screenOrientation="unspecified" />
+281-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:208:13-52
+282        <activity
+282-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:209:9-213:63
+283            android:name="com.shreya_scademy.app.ui.base.BaseActivity"
+283-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:210:13-49
+284            android:exported="false"
+284-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:211:13-37
+285            android:screenOrientation="portrait"
+285-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:212:13-49
+286            android:windowSoftInputMode="stateAlwaysHidden" />
+286-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:213:13-60
+287        <activity
+287-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:214:9-217:52
+288            android:name="com.shreya_scademy.app.ui.UpcomingExams.ActivitySubVacancy"
+288-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:215:13-64
+289            android:exported="false"
+289-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:216:13-37
+290            android:screenOrientation="portrait" />
+290-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:217:13-49
+291        <activity
+291-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:218:9-222:52
+292            android:name="com.shreya_scademy.app.ui.mcq.resultquestionlist.ActivityPaperResultList"
+292-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:219:13-78
+293            android:configChanges="keyboardHidden|orientation|screenSize"
+293-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:220:13-74
+294            android:exported="false"
+294-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:221:13-37
+295            android:screenOrientation="portrait" />
+295-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:222:13-49
+296        <activity
+296-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:223:9-226:52
+297            android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ActivityGalleryVideos"
+297-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:224:13-74
+298            android:exported="false"
+298-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:225:13-37
+299            android:screenOrientation="portrait" />
+299-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:226:13-49
+300        <activity
+300-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:227:9-230:52
+301            android:name="com.shreya_scademy.app.ui.noticeAnnouncement.ActivityForFragments"
+301-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:228:13-71
+302            android:exported="false"
+302-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:229:13-37
+303            android:screenOrientation="portrait" />
+303-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:230:13-49
+304        <activity
+304-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:231:9-234:52
+305            android:name="com.shreya_scademy.app.ui.mcq.generateresult.ActivityGenerateResult"
+305-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:232:13-73
+306            android:exported="false"
+306-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:233:13-37
+307            android:screenOrientation="portrait" />
+307-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:234:13-49
+308        <activity
+308-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:235:9-238:40
+309            android:name="com.shreya_scademy.app.ui.mcq.practiceresult.ActivityPracticeResult"
+309-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:236:13-73
+310            android:configChanges="keyboardHidden|orientation|screenSize"
+310-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:237:13-74
+311            android:exported="false" />
+311-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:238:13-37
+312        <activity
+312-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:239:9-242:52
+313            android:name="com.shreya_scademy.app.ui.mcq.practicepaper.ActivityPracticePaper"
+313-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:240:13-71
+314            android:exported="false"
+314-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:241:13-37
+315            android:screenOrientation="portrait" />
+315-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:242:13-49
+316        <activity
+316-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:243:9-246:52
+317            android:name="com.shreya_scademy.app.ui.mcq.ActivityMCQDashboard"
+317-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:244:13-56
+318            android:exported="false"
+318-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:245:13-37
+319            android:screenOrientation="portrait" />
+319-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:246:13-49
+320        <activity
+320-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:247:9-250:52
+321            android:name="com.shreya_scademy.app.ui.UpcomingExams.ActivityVacancyOrUpcomingExam"
+321-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:248:13-75
+322            android:exported="false"
+322-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:249:13-37
+323            android:screenOrientation="portrait" />
+323-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:250:13-49
+324        <activity
+324-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:251:9-254:52
+325            android:name="com.shreya_scademy.app.ui.home.ActivityHome"
+325-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:252:13-49
+326            android:exported="false"
+326-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:253:13-37
+327            android:screenOrientation="portrait" />
+327-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:254:13-49
+328        <activity
+328-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:255:9-259:76
+329            android:name="com.shreya_scademy.app.ui.login.ActivityLogin"
+329-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:256:13-51
+330            android:exported="false"
+330-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:257:13-37
+331            android:screenOrientation="portrait"
+331-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:258:13-49
+332            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+332-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:259:13-73
+333        <activity
+333-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:260:9-264:76
+334            android:name="com.shreya_scademy.app.ui.mobilephone.PhoneNumberLoginActivity"
+334-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:261:13-68
+335            android:exported="false"
+335-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:262:13-37
+336            android:screenOrientation="portrait"
+336-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:263:13-49
+337            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+337-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:264:13-73
+338        <activity
+338-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:265:9-269:76
+339            android:name="com.shreya_scademy.app.ui.mobilephone.PhoneNumberVerificationActivity"
+339-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:266:13-75
+340            android:exported="false"
+340-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:267:13-37
+341            android:screenOrientation="portrait"
+341-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:268:13-49
+342            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+342-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:269:13-73
+343        <activity
+343-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:270:9-280:20
+344            android:name="com.shreya_scademy.app.ui.splash.SplashActivity"
+344-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:271:13-53
+345            android:exported="true"
+345-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:272:13-36
+346            android:screenOrientation="portrait"
+346-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:273:13-49
+347            android:windowSoftInputMode="stateAlwaysHidden" >
+347-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:274:13-60
+348            <intent-filter>
+348-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:275:13-279:29
+349                <action android:name="android.intent.action.MAIN" />
+349-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:276:17-69
+349-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:276:25-66
+350
+351                <category android:name="android.intent.category.LAUNCHER" />
+351-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:278:17-77
+351-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:278:27-74
+352            </intent-filter>
+353        </activity>
+354        <activity
+354-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:281:9-285:76
+355            android:name="com.shreya_scademy.app.ui.contact.ContactActivity"
+355-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:282:13-55
+356            android:exported="false"
+356-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:283:13-37
+357            android:screenOrientation="portrait"
+357-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:284:13-49
+358            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+358-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:285:13-73
+359        <activity
+359-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:286:9-290:63
+360            android:name="com.shreya_scademy.app.ui.help.HelpActivity"
+360-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:287:13-49
+361            android:exported="false"
+361-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:288:13-37
+362            android:screenOrientation="portrait"
+362-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:289:13-49
+363            android:windowSoftInputMode="stateAlwaysHidden" />
+363-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:290:13-60
+364        <activity
+364-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:291:9-296:63
+365            android:name="com.shreya_scademy.app.ui.help.HelpDetailActivity"
+365-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:292:13-55
+366            android:exported="false"
+366-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:293:13-37
+367            android:hardwareAccelerated="true"
+367-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:294:13-47
+368            android:screenOrientation="portrait"
+368-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:295:13-49
+369            android:windowSoftInputMode="stateAlwaysHidden" />
+369-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:296:13-60
+370
+371        <meta-data
+371-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:298:9-300:53
+372            android:name="com.google.firebase.messaging.default_notification_color"
+372-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:299:13-84
+373            android:resource="@color/colorAccent" />
+373-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:300:13-50
+374
+375        <service
+375-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:302:9-308:19
+376            android:name="com.shreya_scademy.app.utils.Firebase.MyFirebaseMessagingService"
+376-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:303:13-70
+377            android:exported="false" >
+377-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:304:13-37
+378            <intent-filter>
+378-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:305:13-307:29
+379                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+379-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:306:17-78
+379-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:306:25-75
+380            </intent-filter>
+381        </service> <!-- pay pal server decler -->
+382        <service
+382-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:309:9-311:40
+383            android:name="com.paypal.android.sdk.payments.PayPalService"
+383-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:310:13-73
+384            android:exported="false" />
+384-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:311:13-37
+385
+386        <provider
+386-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:313:9-321:20
+387            android:name="androidx.core.content.FileProvider"
+387-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:314:13-62
+388            android:authorities="com.shreya_scademy.app.provider"
+388-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:315:13-66
+389            android:exported="false"
+389-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:316:13-37
+390            android:grantUriPermissions="true" >
+390-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:317:13-47
+391            <meta-data
+391-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:318:13-320:58
+392                android:name="android.support.FILE_PROVIDER_PATHS"
+392-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:319:17-67
+393                android:resource="@xml/provider_paths" />
+393-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:320:17-55
+394        </provider>
+395
+396        <activity
+396-->[com.karumi:dexter:6.2.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e91183ee5e8d3b9fc8f0b0afdf733b77\jetified-dexter-6.2.3\AndroidManifest.xml:27:9-29:72
+397            android:name="com.karumi.dexter.DexterActivity"
+397-->[com.karumi:dexter:6.2.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e91183ee5e8d3b9fc8f0b0afdf733b77\jetified-dexter-6.2.3\AndroidManifest.xml:28:13-60
+398            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+398-->[com.karumi:dexter:6.2.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e91183ee5e8d3b9fc8f0b0afdf733b77\jetified-dexter-6.2.3\AndroidManifest.xml:29:13-69
+399        <activity android:name="com.facebook.CustomTabMainActivity" />
+399-->[com.facebook.android:facebook-common:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3eab1c8e091ea6f6c48daad46c5f1ac7\jetified-facebook-common-12.3.0\AndroidManifest.xml:34:9-71
+399-->[com.facebook.android:facebook-common:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3eab1c8e091ea6f6c48daad46c5f1ac7\jetified-facebook-common-12.3.0\AndroidManifest.xml:34:19-68
+400
+401        <provider
+401-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\be8808a03d653d0c44b57fe005dcc09d\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+402            android:name="com.squareup.picasso.PicassoProvider"
+402-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\be8808a03d653d0c44b57fe005dcc09d\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+403            android:authorities="com.shreya_scademy.app.com.squareup.picasso"
+403-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\be8808a03d653d0c44b57fe005dcc09d\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+404            android:exported="false" />
+404-->[com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\be8808a03d653d0c44b57fe005dcc09d\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+405        <!--
+406             FirebaseMessagingService performs security checks at runtime,
+407             but set to not exported to explicitly avoid allowing another app to call it.
+408        -->
+409        <service
+409-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:28:9-35:19
+410            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+410-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:29:13-82
+411            android:directBootAware="true"
+411-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:30:13-43
+412            android:exported="false" >
+412-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:31:13-37
+413            <intent-filter android:priority="-500" >
+413-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:305:13-307:29
+414                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+414-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:306:17-78
+414-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:306:25-75
+415            </intent-filter>
+416        </service>
+417        <service
+417-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:36:9-42:19
+418            android:name="com.google.firebase.components.ComponentDiscoveryService"
+418-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:37:13-84
+419            android:directBootAware="true"
+419-->[com.google.firebase:firebase-common:19.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320e4cf9b8343cfbf95acde4102d929d\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+420            android:exported="false" >
+420-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:38:13-37
+421            <meta-data
+421-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:39:13-41:85
+422                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+422-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:40:17-119
+423                android:value="com.google.firebase.components.ComponentRegistrar" />
+423-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8ca1c52c225d8d044a4e8285282b0e88\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:41:17-82
+424            <meta-data
+424-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b0b3ae66603772a4742b28ec9639b479\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:16:13-18:85
+425                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+425-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b0b3ae66603772a4742b28ec9639b479\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:17:17-115
+426                android:value="com.google.firebase.components.ComponentRegistrar" />
+426-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b0b3ae66603772a4742b28ec9639b479\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:18:17-82
+427            <meta-data
+427-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fe5a523aa5b68f2dfb1a5ec64aec482d\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+428                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+428-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fe5a523aa5b68f2dfb1a5ec64aec482d\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+429                android:value="com.google.firebase.components.ComponentRegistrar" />
+429-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fe5a523aa5b68f2dfb1a5ec64aec482d\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+430            <meta-data
+430-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:32:13-34:85
+431                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+431-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:33:17-96
+432                android:value="com.google.firebase.components.ComponentRegistrar" />
+432-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:34:17-82
+433            <meta-data
+433-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\af60214ce72ed9afe707bbce7d9e9f41\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:30:13-32:85
+434                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+434-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\af60214ce72ed9afe707bbce7d9e9f41\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:31:17-139
+435                android:value="com.google.firebase.components.ComponentRegistrar" />
+435-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\af60214ce72ed9afe707bbce7d9e9f41\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:32:17-82
+436            <meta-data
+436-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8cea5ee880544f0a773fb17a2f239d5b\jetified-firebase-installations-16.3.3\AndroidManifest.xml:17:13-19:85
+437                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+437-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8cea5ee880544f0a773fb17a2f239d5b\jetified-firebase-installations-16.3.3\AndroidManifest.xml:18:17-127
+438                android:value="com.google.firebase.components.ComponentRegistrar" />
+438-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8cea5ee880544f0a773fb17a2f239d5b\jetified-firebase-installations-16.3.3\AndroidManifest.xml:19:17-82
+439        </service>
+440
+441        <activity
+441-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:45:9-49:58
+442            android:name="com.zipow.videobox.JoinByURLActivity"
+442-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:46:13-64
+443            android:configChanges="orientation|screenSize"
+443-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:47:13-59
+444            android:launchMode="singleTask"
+444-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:48:13-44
+445            android:theme="@style/ZMTheme.Transparent" />
+445-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:49:13-55
+446        <activity
+446-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:50:9-54:58
+447            android:name="com.zipow.videobox.IntegrationActivity"
+447-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:51:13-66
+448            android:configChanges="orientation|screenSize"
+448-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:52:13-59
+449            android:launchMode="singleTask"
+449-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:53:13-44
+450            android:theme="@style/ZMTheme.Transparent" />
+450-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:54:13-55
+451        <activity
+451-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:55:9-58:59
+452            android:name="com.zipow.videobox.MeetingEndMessageActivity"
+452-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:56:13-72
+453            android:configChanges="orientation|screenSize"
+453-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:57:13-59
+454            android:theme="@style/ZMDialog.Transparent" />
+454-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:58:13-56
+455        <activity
+455-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:59:9-63:59
+456            android:name="com.zipow.videobox.JoinMeetingFailActivity"
+456-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:60:13-70
+457            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode"
+457-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:61:13-129
+458            android:launchMode="singleTask"
+458-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:62:13-44
+459            android:theme="@style/ZMDialog.Transparent" />
+459-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:63:13-56
+460        <activity
+460-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:64:9-68:56
+461            android:name="com.zipow.videobox.ConfActivityNormal"
+461-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:65:13-65
+462            android:configChanges="orientation|screenSize"
+462-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:66:13-59
+463            android:hardwareAccelerated="false"
+463-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:67:13-48
+464            android:theme="@style/ZMTheme.SubWindow" />
+464-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:68:13-53
+465        <activity
+465-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:69:9-73:56
+466            android:name="com.zipow.videobox.PListActivity"
+466-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:70:13-60
+467            android:configChanges="orientation|screenSize"
+467-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:71:13-59
+468            android:hardwareAccelerated="false"
+468-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:72:13-48
+469            android:theme="@style/ZMTheme.SubWindow" />
+469-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:73:13-53
+470        <activity
+470-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:74:9-78:56
+471            android:name="com.zipow.videobox.InMeetingSettingsActivity"
+471-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:75:13-72
+472            android:configChanges="orientation|screenSize"
+472-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:76:13-59
+473            android:hardwareAccelerated="false"
+473-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:77:13-48
+474            android:theme="@style/ZMTheme.SubWindow" />
+474-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:78:13-53
+475        <activity
+475-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:79:9-82:56
+476            android:name="com.zipow.videobox.ConfChatActivityOld"
+476-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:80:13-66
+477            android:configChanges="orientation|screenSize"
+477-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:81:13-59
+478            android:theme="@style/ZMTheme.SubWindow" />
+478-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:82:13-53
+479        <activity
+479-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:83:9-86:56
+480            android:name="com.zipow.videobox.MeetingRunningInfoActivity"
+480-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:84:13-73
+481            android:configChanges="orientation|screenSize"
+481-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:85:13-59
+482            android:theme="@style/ZMTheme.SubWindow" />
+482-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:86:13-53
+483        <activity
+483-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:87:9-90:56
+484            android:name="com.zipow.videobox.CallInActivity"
+484-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:88:13-61
+485            android:configChanges="orientation|screenSize"
+485-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:89:13-59
+486            android:theme="@style/ZMTheme.SubWindow" />
+486-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:90:13-53
+487        <activity
+487-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:91:9-95:70
+488            android:name="com.zipow.videobox.SimpleActivity"
+488-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:92:13-61
+489            android:configChanges="orientation|screenSize"
+489-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:93:13-59
+490            android:theme="@style/ZMTheme.SubWindow"
+490-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:94:13-53
+491            android:windowSoftInputMode="stateHidden|adjustResize" />
+491-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:95:13-67
+492        <activity
+492-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:96:9-100:70
+493            android:name="com.zipow.videobox.SimpleInMeetingActivity"
+493-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:97:13-70
+494            android:configChanges="orientation|screenSize"
+494-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:98:13-59
+495            android:theme="@style/ZMTheme.SubWindow"
+495-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:99:13-53
+496            android:windowSoftInputMode="stateHidden|adjustResize" />
+496-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:100:13-67
+497        <activity
+497-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:101:9-104:56
+498            android:name="com.zipow.videobox.poll.PollingActivity"
+498-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:102:13-67
+499            android:configChanges="orientation|screenSize"
+499-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:103:13-59
+500            android:theme="@style/ZMTheme.SubWindow" />
+500-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:104:13-53
+501        <activity
+501-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:105:9-108:56
+502            android:name="com.zipow.videobox.poll.WebinarPollingActivity"
+502-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:106:13-74
+503            android:configChanges="orientation|screenSize"
+503-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:107:13-59
+504            android:theme="@style/ZMTheme.SubWindow" />
+504-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:108:13-53
+505        <activity
+505-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:109:9-112:56
+506            android:name="com.zipow.videobox.poll.PollingResultActivity"
+506-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:110:13-73
+507            android:configChanges="orientation|screenSize"
+507-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:111:13-59
+508            android:theme="@style/ZMTheme.SubWindow" />
+508-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:112:13-53
+509        <activity
+509-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:113:9-116:56
+510            android:name="com.zipow.videobox.poll.WebinarPollingResultActivity"
+510-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:114:13-80
+511            android:configChanges="orientation|screenSize"
+511-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:115:13-59
+512            android:theme="@style/ZMTheme.SubWindow" />
+512-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:116:13-53
+513        <activity
+513-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:117:9-120:56
+514            android:name="us.zoom.androidlib.app.ZMFileListActivity"
+514-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:118:13-69
+515            android:configChanges="orientation|screenSize"
+515-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:119:13-59
+516            android:theme="@style/ZMTheme.SubWindow" />
+516-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:120:13-53
+517
+518        <service
+518-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:122:9-125:51
+519            android:name="com.zipow.videobox.kubi.KubiService"
+519-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:123:13-63
+520            android:exported="false"
+520-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:124:13-37
+521            android:label="@string/zm_app_name" />
+521-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:125:13-48
+522        <service
+522-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:126:9-128:40
+523            android:name="com.zipow.videobox.OnClearFromRecentService"
+523-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:127:13-71
+524            android:exported="false" />
+524-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:128:13-37
+525        <service
+525-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:129:9-133:51
+526            android:name="com.zipow.videobox.share.ScreenShareServiceForSDK"
+526-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:130:13-77
+527            android:exported="false"
+527-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:131:13-37
+528            android:foregroundServiceType="mediaProjection"
+528-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:132:13-60
+529            android:label="@string/zm_app_name" />
+529-->[:mobilertc] F:\Android Project\eacademy_8_4_2022\eacademy\mobilertc\build\.transforms\fbe05503e7a2d272c8e46cb2f61d60c7\jetified-mobilertc\AndroidManifest.xml:133:13-48
+530
+531        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+531-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:13:9-84
+531-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:13:19-81
+532        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+532-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:14:9-90
+532-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:14:19-87
+533        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+533-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:15:9-91
+533-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:15:19-88
+534        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+534-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:16:9-82
+534-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:16:19-79
+535        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+535-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:17:9-96
+535-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:17:19-93
+536        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+536-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:18:9-97
+536-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:18:19-94
+537        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+537-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:19:9-94
+537-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:19:19-91
+538        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+538-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:20:9-97
+538-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:20:19-94
+539        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+539-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:21:9-98
+539-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\4c3928fe77c7d8d47fe85f3bf51b6933\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:21:19-95
+540
+541        <receiver
+541-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:40:9-46:20
+542            android:name="com.razorpay.RzpTokenReceiver"
+542-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:41:13-57
+543            android:exported="false" >
+543-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:42:13-37
+544            <intent-filter>
+544-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:43:13-45:29
+545                <action android:name="rzp.device_token.share" />
+545-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:44:17-65
+545-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:44:25-62
+546            </intent-filter>
+547        </receiver>
+548
+549        <activity
+549-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:48:9-60:20
+550            android:name="com.razorpay.CheckoutActivity"
+550-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:49:13-57
+551            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+551-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:50:13-83
+552            android:exported="true"
+552-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:51:13-36
+553            android:theme="@style/CheckoutTheme" >
+553-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:52:13-49
+554            <intent-filter>
+554-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:53:13-59:29
+555                <action android:name="android.intent.action.MAIN" />
+555-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:276:17-69
+555-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:276:25-66
+556
+557                <data
+557-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:17-75
+558                    android:host="rzp.io"
+559                    android:scheme="io.rzp" />
+559-->F:\Android Project\eacademy_8_4_2022\eacademy\app\src\main\AndroidManifest.xml:69:23-72
+560            </intent-filter>
+561        </activity>
+562
+563        <meta-data
+563-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:62:9-64:58
+564            android:name="com.razorpay.plugin.googlepay_all"
+564-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:63:13-61
+565            android:value="com.razorpay.RzpGpayMerged" />
+565-->[com.razorpay:checkout:1.6.18] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0d1023252dde97a2361678dc3fe06cd8\jetified-checkout-1.6.18\AndroidManifest.xml:64:13-55
+566
+567        <activity
+567-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:23:9-27:75
+568            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+568-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:24:13-93
+569            android:excludeFromRecents="true"
+569-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:25:13-46
+570            android:exported="false"
+570-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:26:13-37
+571            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+571-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:27:13-72
+572        <!--
+573            Service handling Google Sign-In user revocation. For apps that do not integrate with
+574            Google Sign-In, this service will never be started.
+575        -->
+576        <service
+576-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:33:9-37:51
+577            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+577-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:34:13-89
+578            android:exported="true"
+578-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:35:13-36
+579            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+579-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:36:13-107
+580            android:visibleToInstantApps="true" />
+580-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c57f4bc92cd2573087362b682c7ec1\jetified-play-services-auth-20.1.0\AndroidManifest.xml:37:13-48
+581        <service
+581-->[androidx.room:room-runtime:2.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\c19dce8ea9b7dc17566711f4b8220925\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+582            android:name="androidx.room.MultiInstanceInvalidationService"
+582-->[androidx.room:room-runtime:2.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\c19dce8ea9b7dc17566711f4b8220925\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+583            android:directBootAware="true"
+583-->[androidx.room:room-runtime:2.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\c19dce8ea9b7dc17566711f4b8220925\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+584            android:exported="false" />
+584-->[androidx.room:room-runtime:2.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\c19dce8ea9b7dc17566711f4b8220925\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+585        <service
+585-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\90ba5005b033034d6ffff0d5fcf7ef18\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:29:9-35:19
+586            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+586-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\90ba5005b033034d6ffff0d5fcf7ef18\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:30:13-103
+587            android:exported="false" >
+587-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\90ba5005b033034d6ffff0d5fcf7ef18\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:31:13-37
+588            <meta-data
+588-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\90ba5005b033034d6ffff0d5fcf7ef18\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:32:13-34:39
+589                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+589-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\90ba5005b033034d6ffff0d5fcf7ef18\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:33:17-94
+590                android:value="cct" />
+590-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\90ba5005b033034d6ffff0d5fcf7ef18\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:34:17-36
+591        </service> <!-- Needs to be explicitly declared on P+ -->
+592        <uses-library
+592-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d19bbc1e877343eb38dfc3d8adaa513f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+593            android:name="org.apache.http.legacy"
+593-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d19bbc1e877343eb38dfc3d8adaa513f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+594            android:required="false" />
+594-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d19bbc1e877343eb38dfc3d8adaa513f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+595
+596        <receiver
+596-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:37:9-44:20
+597            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+597-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:38:13-78
+598            android:exported="true"
+598-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:39:13-36
+599            android:permission="com.google.android.c2dm.permission.SEND" >
+599-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:40:13-73
+600            <intent-filter>
+600-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:41:13-43:29
+601                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+601-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:42:17-81
+601-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3e3c9a9d4afdee9582ea891e42d1c8c0\jetified-firebase-iid-20.3.0\AndroidManifest.xml:42:25-78
+602            </intent-filter>
+603        </receiver>
+604
+605        <activity
+605-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8365cb49375d622ee764e2771a4bc9ee\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+606            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+606-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8365cb49375d622ee764e2771a4bc9ee\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+607            android:exported="false"
+607-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8365cb49375d622ee764e2771a4bc9ee\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+608            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+608-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\8365cb49375d622ee764e2771a4bc9ee\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+609
+610        <receiver
+610-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:29:9-33:20
+611            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+611-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:30:13-85
+612            android:enabled="true"
+612-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:31:13-35
+613            android:exported="false" >
+613-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:32:13-37
+614        </receiver>
+615
+616        <service
+616-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:35:9-38:40
+617            android:name="com.google.android.gms.measurement.AppMeasurementService"
+617-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:36:13-84
+618            android:enabled="true"
+618-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:37:13-35
+619            android:exported="false" />
+619-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:38:13-37
+620        <service
+620-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:39:9-43:72
+621            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+621-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:40:13-87
+622            android:enabled="true"
+622-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:41:13-35
+623            android:exported="false"
+623-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:42:13-37
+624            android:permission="android.permission.BIND_JOB_SERVICE" />
+624-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\785cb6f7d6b4cd14a11d778ecebfdd62\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:43:13-69
+625
+626        <provider
+626-->[com.google.firebase:firebase-common:19.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320e4cf9b8343cfbf95acde4102d929d\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+627            android:name="com.google.firebase.provider.FirebaseInitProvider"
+627-->[com.google.firebase:firebase-common:19.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320e4cf9b8343cfbf95acde4102d929d\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+628            android:authorities="com.shreya_scademy.app.firebaseinitprovider"
+628-->[com.google.firebase:firebase-common:19.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320e4cf9b8343cfbf95acde4102d929d\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+629            android:directBootAware="true"
+629-->[com.google.firebase:firebase-common:19.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320e4cf9b8343cfbf95acde4102d929d\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+630            android:exported="false"
+630-->[com.google.firebase:firebase-common:19.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320e4cf9b8343cfbf95acde4102d929d\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+631            android:initOrder="100" />
+631-->[com.google.firebase:firebase-common:19.3.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320e4cf9b8343cfbf95acde4102d929d\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+632
+633        <meta-data
+633-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\457caaca61f235d4e1678d59217f143d\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+634            android:name="com.google.android.gms.version"
+634-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\457caaca61f235d4e1678d59217f143d\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+635            android:value="@integer/google_play_services_version" />
+635-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\457caaca61f235d4e1678d59217f143d\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+636
+637        <provider
+637-->[androidx.emoji2:emoji2:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\1cab913cbb63f57f7d381fc71b760030\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+638            android:name="androidx.startup.InitializationProvider"
+638-->[androidx.emoji2:emoji2:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\1cab913cbb63f57f7d381fc71b760030\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+639            android:authorities="com.shreya_scademy.app.androidx-startup"
+639-->[androidx.emoji2:emoji2:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\1cab913cbb63f57f7d381fc71b760030\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+640            android:exported="false" >
+640-->[androidx.emoji2:emoji2:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\1cab913cbb63f57f7d381fc71b760030\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+641            <meta-data
+641-->[androidx.emoji2:emoji2:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\1cab913cbb63f57f7d381fc71b760030\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+642                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+642-->[androidx.emoji2:emoji2:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\1cab913cbb63f57f7d381fc71b760030\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+643                android:value="androidx.startup" />
+643-->[androidx.emoji2:emoji2:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\1cab913cbb63f57f7d381fc71b760030\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+644            <meta-data
+644-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\64ea1f0ccd278be3f3c1bac88d18e2a3\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+645                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+645-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\64ea1f0ccd278be3f3c1bac88d18e2a3\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+646                android:value="androidx.startup" />
+646-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\64ea1f0ccd278be3f3c1bac88d18e2a3\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+647        </provider>
+648        <!--
+649         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+650         with the application context. This config is merged in with the host app's manifest,
+651         but there can only be one provider with the same authority activated at any given
+652         point; so if the end user has two or more different apps that use Facebook SDK, only the
+653         first one will be able to use the provider. To work around this problem, we use the
+654         following placeholder in the authority to identify each host application as if it was
+655         a completely different provider.
+656        -->
+657        <provider
+657-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:39:9-42:40
+658            android:name="com.facebook.internal.FacebookInitProvider"
+658-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:40:13-70
+659            android:authorities="com.shreya_scademy.app.FacebookInitProvider"
+659-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:41:13-72
+660            android:exported="false" />
+660-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:42:13-37
+661
+662        <receiver
+662-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:44:9-50:20
+663            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+663-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:45:13-86
+664            android:exported="false" >
+664-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:46:13-37
+665            <intent-filter>
+665-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:47:13-49:29
+666                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+666-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:48:17-95
+666-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:48:25-92
+667            </intent-filter>
+668        </receiver>
+669        <receiver
+669-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:51:9-57:20
+670            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+670-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:52:13-118
+671            android:exported="false" >
+671-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:53:13-37
+672            <intent-filter>
+672-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:54:13-56:29
+673                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+673-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:55:17-103
+673-->[com.facebook.android:facebook-core:12.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7ebcc1a6f41600838d16cd9a563427e5\jetified-facebook-core-12.3.0\AndroidManifest.xml:55:25-100
+674            </intent-filter>
+675        </receiver>
+676
+677        <service
+677-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6b37ae9242b562feca9a9ebd8e100be0\jetified-transport-runtime-2.2.4\AndroidManifest.xml:26:9-30:19
+678            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+678-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6b37ae9242b562feca9a9ebd8e100be0\jetified-transport-runtime-2.2.4\AndroidManifest.xml:27:13-117
+679            android:exported="false"
+679-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6b37ae9242b562feca9a9ebd8e100be0\jetified-transport-runtime-2.2.4\AndroidManifest.xml:28:13-37
+680            android:permission="android.permission.BIND_JOB_SERVICE" >
+680-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6b37ae9242b562feca9a9ebd8e100be0\jetified-transport-runtime-2.2.4\AndroidManifest.xml:29:13-69
+681        </service>
+682
+683        <receiver
+683-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6b37ae9242b562feca9a9ebd8e100be0\jetified-transport-runtime-2.2.4\AndroidManifest.xml:32:9-34:40
+684            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+684-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6b37ae9242b562feca9a9ebd8e100be0\jetified-transport-runtime-2.2.4\AndroidManifest.xml:33:13-132
+685            android:exported="false" />
+685-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6b37ae9242b562feca9a9ebd8e100be0\jetified-transport-runtime-2.2.4\AndroidManifest.xml:34:13-37
+686
+687        <activity
+687-->[io.card:android-sdk:5.5.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e42628d9df08214e0f5e3d9abcfb4703\jetified-android-sdk-5.5.1\AndroidManifest.xml:20:9-22:66
+688            android:name="io.card.payment.CardIOActivity"
+688-->[io.card:android-sdk:5.5.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e42628d9df08214e0f5e3d9abcfb4703\jetified-android-sdk-5.5.1\AndroidManifest.xml:21:13-58
+689            android:configChanges="keyboardHidden|orientation" />
+689-->[io.card:android-sdk:5.5.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e42628d9df08214e0f5e3d9abcfb4703\jetified-android-sdk-5.5.1\AndroidManifest.xml:22:13-63
+690        <activity android:name="io.card.payment.DataEntryActivity" />
+690-->[io.card:android-sdk:5.5.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e42628d9df08214e0f5e3d9abcfb4703\jetified-android-sdk-5.5.1\AndroidManifest.xml:23:9-70
+690-->[io.card:android-sdk:5.5.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e42628d9df08214e0f5e3d9abcfb4703\jetified-android-sdk-5.5.1\AndroidManifest.xml:23:19-67
+691    </application>
+692
+693</manifest>

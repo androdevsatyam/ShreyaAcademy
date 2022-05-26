@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_renew_course"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/renew_couse" />
+    <item
+        android:id="@+id/menu_transfer_course"
+        android:icon="@drawable/ic_baseline_import_contacts_24"
+        android:title="@string/transfer_course" />
+    <item
+        android:id="@+id/menu_rate_course"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/rate_course" />
+
+    <item
+        android:id="@+id/menu_download_offline"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/download_offline" />
+</menu>

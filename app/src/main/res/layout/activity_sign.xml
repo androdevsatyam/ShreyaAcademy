@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bgimg"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlSignup"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:src="@drawable/image_login" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+                <com.shreya_scademy.app.utils.widgets.CustomTextBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:text="@string/signupwith"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomTextBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="#fe9d43"
+                    android:textSize="@dimen/_17sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.shreya_scademy.app.utils.widgets.CustomEditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/login_edit_grad"
+                android:hint="@string/Name"
+                android:paddingStart="20dp"
+                android:paddingTop="@dimen/_13sdp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="@dimen/_13sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textDirection="locale" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomEditText
+                android:id="@+id/etUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/login_edit_grad"
+                android:hint="@string/email"
+                android:paddingStart="20dp"
+                android:paddingTop="@dimen/_13sdp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="@dimen/_13sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textDirection="locale" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomEditText
+                android:id="@+id/etUserMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/login_edit_grad"
+                android:hint="@string/MobileNumber"
+                android:inputType="number"
+                android:maxLength="18"
+                android:paddingStart="20dp"
+                android:paddingTop="@dimen/_13sdp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="@dimen/_13sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText"
+                android:textDirection="locale" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomTextSemiBold
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/btnSignup"
+                android:layout_width="@dimen/_165sdp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/backbutton" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomSmallText
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_75sdp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/Signup"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnPhoneSignIn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/back_shade_designmain_signin"
+                    android:src="@drawable/ic_phone"
+                    android:gravity="center"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnGoogleSignIn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnGoogleSignIn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/back_shade_designmain_signin"
+                    android:src="@drawable/ic_google"
+                    android:gravity="center"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnPhoneSignIn"
+                    app:layout_constraintEnd_toStartOf="@+id/btnFacebookSignIn"
+                    app:layout_constraintStart_toEndOf="@+id/btnPhoneSignIn"
+                    app:layout_constraintTop_toTopOf="@+id/btnPhoneSignIn"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnFacebookSignIn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/back_shade_designmain_signin"
+                    android:src="@drawable/ic_facebook"
+                    android:gravity="center"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnGoogleSignIn"
+                    app:layout_constraintTop_toTopOf="@+id/btnGoogleSignIn"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/rlSignup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back_splash_grad">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_19sdp"
+                android:gravity="center"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/signin"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:text="@string/Signup"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/tvMove"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_19sdp"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_baseline_home_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/loginTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_19sdp"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_baseline_login_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/LOGIN"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+

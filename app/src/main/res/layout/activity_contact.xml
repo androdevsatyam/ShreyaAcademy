@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@drawable/backcurve">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/header" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/back_curve_white"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingTop="32dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header">
+
+                <com.shreya_scademy.app.utils.widgets.CustomeTextRegular
+                    android:id="@+id/txtName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/NAME"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_grad"
+                    android:hint="@string/enter_your_name"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/app_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomeTextRegular
+                    android:id="@+id/txtEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/email"
+                    app:layout_constraintEnd_toEndOf="@+id/edtName"
+                    app:layout_constraintStart_toStartOf="@+id/edtName"
+                    app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_grad"
+                    android:hint="@string/enter_your_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="30"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/app_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomeTextRegular
+                    android:id="@+id/txtSubject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/subject"
+                    app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+                    app:layout_constraintStart_toStartOf="@+id/edtEmail"
+                    app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomEditText
+                    android:id="@+id/edtSubject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_grad"
+                    android:hint="@string/enter_your_subject"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/app_gray"
+                    app:layout_constraintEnd_toEndOf="@+id/txtSubject"
+                    app:layout_constraintStart_toStartOf="@+id/txtSubject"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSubject" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomeTextRegular
+                    android:id="@+id/txtPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/MobileNumber"
+                    app:layout_constraintEnd_toEndOf="@+id/edtSubject"
+                    app:layout_constraintStart_toStartOf="@+id/edtSubject"
+                    app:layout_constraintTop_toBottomOf="@+id/edtSubject" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomEditText
+                    android:id="@+id/edtPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_grad"
+                    android:hint="@string/enter_your_mobile_number"
+                    android:inputType="number"
+                    android:maxLength="30"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/app_gray"
+                    app:layout_constraintEnd_toEndOf="@+id/txtPhoneNumber"
+                    app:layout_constraintStart_toStartOf="@+id/txtPhoneNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumber" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomeTextRegular
+                    android:id="@+id/txtMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/Message"
+                    app:layout_constraintEnd_toEndOf="@+id/edtPhoneNumber"
+                    app:layout_constraintStart_toStartOf="@+id/edtPhoneNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumber" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomEditText
+                    android:id="@+id/edtMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_grad"
+                    android:gravity="start"
+                    android:hint="@string/enter_your_message"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="14dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/app_gray"
+                    app:layout_constraintEnd_toEndOf="@+id/txtMessage"
+                    app:layout_constraintStart_toStartOf="@+id/txtMessage"
+                    app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
+
+                <com.shreya_scademy.app.utils.widgets.CustomSmallText
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/back_shade_designmain"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_24sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingRight="@dimen/_24sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:text="@string/Submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/txtMessage"
+                    app:layout_constraintStart_toStartOf="@+id/txtMessage"
+                    app:layout_constraintTop_toBottomOf="@+id/edtMessage"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>

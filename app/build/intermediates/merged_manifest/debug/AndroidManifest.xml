@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shreya_scademy.app"
+    android:versionCode="12"
+    android:versionName="1.0.12" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data
+                android:mimeType="*/*"
+                android:scheme="*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data
+                android:host="pay"
+                android:mimeType="*/*"
+                android:scheme="upi" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="*/*" />
+        </intent>
+    </queries> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.shreya_scademy.app.App"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.shreya_scademy.app.ui.login.StaffLogin"
+            android:exported="false" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.batch.LeaveCommentActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/com_facebook_activity_theme" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cct.com.shreya_scademy.app"
+                    android:scheme="fbconnect" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shreya_scademy.app.ui.batch.ActivityAllBatch"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.syllabus.ActivitySyllabus"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.certificate.ActivityCertificateAssigned"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.multibatch.ActivityMyBatch"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.paymentGateway.Razorpay"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.library.ActivityPdf"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.library.ActivityLibrary"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.multibatch.ActivityMultiBatchHome"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ActivityVimeoVideo"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.forgotpassword.ActivityForgotPassword"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.batch.ActivityBatchDetails"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.batch.ActivityBatch"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ExoplayerVideos"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.signup.ActivitySignUp"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway"
+            android:exported="false"
+            android:parentActivityName="com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.payment.ActivityPaymentHistory"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.doubtClasses.ActivityDoubtClasses"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.editProfile.ActivityProfile"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.aboutapp.ActivityOpenSourceLibrary"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.aboutapp.ActivityAboutApp"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.settingdashboard.ActivitySettingDashboard"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.applyleave.ActivityApplyLeave"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.certificate.ActivityCertificate"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.home.ActivityPrivacyPolicy"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.attendance.ActivityAttendance"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.academicrecord.ActivityAcademicRecord"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.live.ActivityLive"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.generatepapers.ActivityGetPapers"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.assignment.ActivityAssignment"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.paymentGateway.paypal"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.extraclass.ActivityExtraClass"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.video.ActivityYoutubeVideo"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.base.BaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.UpcomingExams.ActivitySubVacancy"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.mcq.resultquestionlist.ActivityPaperResultList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ActivityGalleryVideos"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.noticeAnnouncement.ActivityForFragments"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.mcq.generateresult.ActivityGenerateResult"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.mcq.practiceresult.ActivityPracticeResult"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.mcq.practicepaper.ActivityPracticePaper"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.mcq.ActivityMCQDashboard"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.UpcomingExams.ActivityVacancyOrUpcomingExam"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.home.ActivityHome"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.login.ActivityLogin"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.mobilephone.PhoneNumberLoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.mobilephone.PhoneNumberVerificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shreya_scademy.app.ui.contact.ContactActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.help.HelpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.shreya_scademy.app.ui.help.HelpDetailActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <service
+            android:name="com.shreya_scademy.app.utils.Firebase.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- pay pal server decler -->
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.shreya_scademy.app.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.karumi.dexter.DexterActivity"
+            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.shreya_scademy.app.com.squareup.picasso"
+            android:exported="false" />
+        <!--
+             FirebaseMessagingService performs security checks at runtime,
+             but set to not exported to explicitly avoid allowing another app to call it.
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.zipow.videobox.JoinByURLActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/ZMTheme.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.IntegrationActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/ZMTheme.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.MeetingEndMessageActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMDialog.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.JoinMeetingFailActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode"
+            android:launchMode="singleTask"
+            android:theme="@style/ZMDialog.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.ConfActivityNormal"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.PListActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.InMeetingSettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.ConfChatActivityOld"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.MeetingRunningInfoActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.CallInActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.SimpleActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.zipow.videobox.SimpleInMeetingActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.zipow.videobox.poll.PollingActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.poll.WebinarPollingActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.poll.PollingResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.poll.WebinarPollingResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="us.zoom.androidlib.app.ZMFileListActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ZMTheme.SubWindow" />
+
+        <service
+            android:name="com.zipow.videobox.kubi.KubiService"
+            android:exported="false"
+            android:label="@string/zm_app_name" />
+        <service
+            android:name="com.zipow.videobox.OnClearFromRecentService"
+            android:exported="false" />
+        <service
+            android:name="com.zipow.videobox.share.ScreenShareServiceForSDK"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"
+            android:label="@string/zm_app_name" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/CheckoutTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.plugin.googlepay_all"
+            android:value="com.razorpay.RzpGpayMerged" />
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" />
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false" >
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service> <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.shreya_scademy.app.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.shreya_scademy.app.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <!--
+         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+         with the application context. This config is merged in with the host app's manifest,
+         but there can only be one provider with the same authority activated at any given
+         point; so if the end user has two or more different apps that use Facebook SDK, only the
+         first one will be able to use the provider. To work around this problem, we use the
+         following placeholder in the authority to identify each host application as if it was
+         a completely different provider.
+        -->
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="com.shreya_scademy.app.FacebookInitProvider"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
+        </service>
+
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
+
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+    </application>
+
+</manifest>

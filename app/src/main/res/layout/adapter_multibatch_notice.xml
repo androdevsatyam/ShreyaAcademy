@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_1sdp"
+        android:orientation="horizontal">
+       <com.shreya_scademy.app.utils.widgets.CustomSmallText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/batchName"
+            android:text="Batch 1"
+            android:paddingStart="@dimen/_7sdp"
+           android:paddingEnd="@dimen/_25sdp"
+            android:textColor="@color/colorText"
+            android:gravity="center"
+            android:textSize="@dimen/_13sdp"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            app:tint="@color/white" />
+        <com.shreya_scademy.app.utils.widgets.CustomeTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SelectNow"
+                android:id="@+id/selectNow"
+            android:textColor="@color/colorPrimaryDark"
+       android:background="@drawable/back_counthome"
+            android:gravity="center"
+            android:elevation="1dp"
+            android:paddingLeft="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingRight="@dimen/_4sdp"
+            android:textSize="@dimen/_14sdp"
+            android:layout_alignParentEnd="true"
+
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            app:tint="@color/white" />
+    </RelativeLayout>
+    <com.shreya_scademy.app.utils.widgets.CustomSmallText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Top_Scorer"
+        android:visibility="gone"
+        android:layout_below="@+id/llnotics"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_weight="1"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="@string/Top_Scorer"
+        android:textColor="@color/colorText"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlTopScorer"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="@dimen/_88sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/back_nor_strock"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:paddingTop="4dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileTopScore1"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_profile"
+                    app:civ_border_color="@color/gray"
+                    app:civ_border_width="0.5dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_back_grad"
+                    android:gravity="center">
+
+                    <com.shreya_scademy.app.utils.widgets.CustomSmallText
+                        android:id="@+id/rankText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="1st"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+                android:id="@+id/tvTsName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.8"
+                android:paddingTop="2dp"
+                android:text="sal"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+                    android:id="@+id/tvPaperName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="123"
+                android:textSize="12sp" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+                android:id="@+id/tvPercent1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:text="12%"
+                android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="@dimen/_88sdp"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_1sdp"
+            android:background="@drawable/back_nor_strock"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:paddingTop="4dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileTopScore2"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_profile"
+                    app:civ_border_color="@color/gray"
+                    app:civ_border_width="0.5dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_back_grad"
+                    android:gravity="center">
+
+                    <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="2nd"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.8"
+                android:paddingTop="4dp"
+                android:text="sal"
+                android:id="@+id/tvTsName2"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPaperName2"
+                android:gravity="center"
+                android:text="123"
+                android:textSize="12sp" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
+                android:id="@+id/percent2"
+                android:paddingBottom="2dp"
+                android:text="2%"
+                android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="@dimen/_88sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/back_nor_strock"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:paddingTop="4dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileTopScore3"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_profile"
+                    app:civ_border_color="@color/gray"
+                    app:civ_border_width="0.5dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_back_grad"
+                    android:gravity="center">
+
+                    <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="3rd"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+                android:id="@+id/tvTsName3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.8"
+                android:paddingTop="4dp"
+                android:text="sal"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPaperName3"
+                android:gravity="center"
+                android:text="123"
+                android:textSize="12sp" />
+
+            <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:id="@+id/percent3"
+                android:text="3rd"
+                android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.shreya_scademy.app.utils.widgets.CustomSmallText
+        android:id="@+id/tvLiveclasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llnotics"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_weight="1"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="@string/Live_class"
+        android:visibility="gone"
+        android:textColor="@color/colorText"
+       /> <LinearLayout
+    android:id="@+id/llLive"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvLiveclasses"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/back_counthome"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    android:padding="@dimen/_5sdp"
+
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivliveClass"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_profile" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.shreya_scademy.app.utils.widgets.CustomSmallText
+            android:id="@+id/nameLiveTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/colorText" />
+
+        <com.shreya_scademy.app.utils.widgets.CustomSmallText
+            android:id="@+id/tvTopicLive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:text=""
+            android:textColor="@color/colorText"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="15dp"
+        android:layout_gravity="right"
+        android:src="@drawable/liveimg" />
+
+</LinearLayout>
+    <com.shreya_scademy.app.utils.widgets.CustomSmallText
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noticeTv"
+        android:layout_below="@+id/llnotics"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_weight="1"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="@string/WelcomeToday_new_topic"
+        android:textColor="@color/colorText"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/noticelist"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@color/text_color"/>
+</LinearLayout>
