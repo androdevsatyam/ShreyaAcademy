@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,6 +39,7 @@ public class AdapterGalleryVideos extends RecyclerView.Adapter<AdapterGalleryVid
         pref = SharedPref.getInstance(mContext);
         modelLogin = pref.getUser(AppConsts.STUDENT_DATA);
         this.subId = subId;
+        Toast.makeText(mContext,"AdapterGalleryVideos\nTotal="+videosUrlsList.size(),Toast.LENGTH_SHORT).show();
     }
 
     @NonNull

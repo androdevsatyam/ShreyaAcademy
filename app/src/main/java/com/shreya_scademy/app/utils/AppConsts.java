@@ -16,7 +16,6 @@ public interface AppConsts {
 
     void setIdsOfAllSelectedQuestions(HashMap<String, String> hasIdsAns, HashMap<String, String> questionTimeHash);
 
-
 // String MAIN_URl = "https://smallcaterers.com/elearning-system/"; //  put your server base url here thanks..
  String MAIN_URl = "https://shreyaacademy.com/"; //  put your server base url here thanks..
 
@@ -57,6 +56,7 @@ public interface AppConsts {
     String API_VIEW_LEAVE = "home/view_leave";
     String API_GET_ACADEMIC_RECORD = "home/getAcademicRecord";
     String API_CHECK_BATCH = "home/check_batch";
+   String API_ADD_USER_RATE = "add_user_content_rate";
     String API_VIEW_PRACTICE_ANS_SHEET = "exam/view_ans_sheet";
     String API_LOGIN = "home/login";
     String API_LOGOUT = "home/logout";
@@ -138,6 +138,4 @@ public interface AppConsts {
     String VIDEO_ID = "video_id";
     String USER_ID = "user_id";
     String COUNT = "count";
-
-
 }

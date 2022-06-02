@@ -47,7 +47,6 @@ public class AdapterSubCat extends RecyclerView.Adapter<AdapterSubCat.MyViewHold
                 holder.subCatList.setLayoutManager(new LinearLayoutManager(context, RecyclerView.HORIZONTAL, false));
 
                 holder.catHead.setText(list.get(holder.getAdapterPosition()).SubcategoryName);
-                holder.catHead.setTextSize(12f);
                 AdapterList adapterCatSubCat = new AdapterList(listBatch, context, stuId);
                 holder.subCatList.setAdapter(adapterCatSubCat);
 
@@ -57,7 +56,6 @@ public class AdapterSubCat extends RecyclerView.Adapter<AdapterSubCat.MyViewHold
                 holder.catSeeAll.setOnClickListener(new View.OnClickListener() {
                                                         @Override
                                                         public void onClick(View v) {
-
                                                             context.startActivity(new Intent(context.getApplicationContext(), ActivityAllBatch.class)
                                                                     .putExtra("subcatname", "" + list.get(holder.getAdapterPosition()).SubcategoryName)
                                                                     .putExtra("subcatId", "" + list.get(holder.getAdapterPosition()).SubcategoryId)

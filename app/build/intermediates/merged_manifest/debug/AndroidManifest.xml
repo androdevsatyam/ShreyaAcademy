@@ -98,6 +98,7 @@
         android:resizeableActivity="false"
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
@@ -145,136 +146,107 @@
         <activity
             android:name="com.shreya_scademy.app.ui.batch.ActivityAllBatch"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.syllabus.ActivitySyllabus"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.certificate.ActivityCertificateAssigned"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.multibatch.ActivityMyBatch"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.paymentGateway.Razorpay"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.library.ActivityPdf"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.library.ActivityLibrary"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.multibatch.ActivityMultiBatchHome"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ActivityVimeoVideo"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="landscape" />
         <activity
             android:name="com.shreya_scademy.app.ui.forgotpassword.ActivityForgotPassword"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.batch.ActivityBatchDetails"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.batch.ActivityBatch"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ExoplayerVideos"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="landscape" />
         <activity
             android:name="com.shreya_scademy.app.ui.signup.ActivitySignUp"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway"
             android:exported="false"
-            android:parentActivityName="com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway"
-            android:screenOrientation="portrait" />
+            android:parentActivityName="com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway" />
         <activity
             android:name="com.shreya_scademy.app.ui.payment.ActivityPaymentHistory"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.doubtClasses.ActivityDoubtClasses"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.shreya_scademy.app.ui.editProfile.ActivityProfile"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.shreya_scademy.app.ui.aboutapp.ActivityOpenSourceLibrary"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.aboutapp.ActivityAboutApp"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.settingdashboard.ActivitySettingDashboard"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.applyleave.ActivityApplyLeave"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.shreya_scademy.app.ui.certificate.ActivityCertificate"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.home.ActivityPrivacyPolicy"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.attendance.ActivityAttendance"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.academicrecord.ActivityAcademicRecord"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.live.ActivityLive"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.generatepapers.ActivityGetPapers"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.assignment.ActivityAssignment"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.paymentGateway.paypal"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.extraclass.ActivityExtraClass"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.video.ActivityYoutubeVideo"
             android:exported="false"
@@ -282,68 +254,54 @@
         <activity
             android:name="com.shreya_scademy.app.ui.base.BaseActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.shreya_scademy.app.ui.UpcomingExams.ActivitySubVacancy"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.mcq.resultquestionlist.ActivityPaperResultList"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.galary.galleryvideos.ActivityGalleryVideos"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.noticeAnnouncement.ActivityForFragments"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.mcq.generateresult.ActivityGenerateResult"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.mcq.practiceresult.ActivityPracticeResult"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.mcq.practicepaper.ActivityPracticePaper"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.mcq.ActivityMCQDashboard"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.UpcomingExams.ActivityVacancyOrUpcomingExam"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.home.ActivityHome"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="com.shreya_scademy.app.ui.login.ActivityLogin"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.mobilephone.PhoneNumberLoginActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.mobilephone.PhoneNumberVerificationActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.splash.SplashActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -354,18 +312,15 @@
         <activity
             android:name="com.shreya_scademy.app.ui.contact.ContactActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.shreya_scademy.app.ui.help.HelpActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.shreya_scademy.app.ui.help.HelpDetailActivity"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <meta-data

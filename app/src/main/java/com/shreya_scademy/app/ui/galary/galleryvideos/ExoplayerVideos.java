@@ -2,22 +2,17 @@ package com.shreya_scademy.app.ui.galary.galleryvideos;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.google.android.exoplayer2.MediaItem;
-import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.util.Util;
@@ -27,13 +22,10 @@ import com.shreya_scademy.app.data.ContentModel;
 import com.shreya_scademy.app.data.DaoHelper;
 import com.shreya_scademy.app.model.modellogin.ModelLogin;
 import com.shreya_scademy.app.ui.base.BaseActivity;
-import com.shreya_scademy.app.ui.batch.ModelCatSubCat;
 import com.shreya_scademy.app.ui.home.ActivityHome;
 import com.shreya_scademy.app.utils.AppConsts;
-import com.shreya_scademy.app.utils.ProjectUtils;
 import com.shreya_scademy.app.utils.sharedpref.SharedPref;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ExoplayerVideos extends BaseActivity {
@@ -43,6 +35,7 @@ public class ExoplayerVideos extends BaseActivity {
     private boolean playWhenReady = true;
     private int currentWindow = 0;
     static long playbackPosition = 0;
+    private long lastPosition;
     String url;
     ImageButton rotateBtn;
     private String videoId;
@@ -53,12 +46,17 @@ public class ExoplayerVideos extends BaseActivity {
     private ContentModel contentModel;
     private SensorManager sensorManager;
     private List<Sensor> deviceSensors;
+    private static final String SELECTED_ITEM_POSITION = "ItemPosition";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_exo_player);
         playerView = findViewById(R.id.playerView);
-        playbackPosition = 0;
+        //  playbackPosition = 0;
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         mContext = ExoplayerVideos.this;
         daoHelper = new DaoHelper(App.getInstance().getAppDatabase());
         sharedPref = SharedPref.getInstance(mContext);
@@ -67,21 +65,21 @@ public class ExoplayerVideos extends BaseActivity {
         rotateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                player.stop();
-                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-
-                } else {
-
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-                }
-
+//                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+//
+//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 //
 //
-//                        // Initialize the variable sensorManager
+//                } else {
+//
+//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//
+//                }
+
+//
+
+                // Initialize the variable sensorManager
 //                sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 //
 //                // getSensorList(Sensor.TYPE_ALL) lists all the sensors present in the device
@@ -89,6 +87,32 @@ public class ExoplayerVideos extends BaseActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(final Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Save the state of item position
+        outState.putLong(SELECTED_ITEM_POSITION, playbackPosition);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Read the state of item position
+        lastPosition = savedInstanceState.getLong(String.valueOf(SELECTED_ITEM_POSITION));
+        playbackPosition = lastPosition;
+        player.prepare();
+
+        //initializePlayer();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
         Intent intent = getIntent();
         if (intent.hasExtra("WEB_URL")) {
             url = getIntent().getStringExtra("WEB_URL");
@@ -101,12 +125,6 @@ public class ExoplayerVideos extends BaseActivity {
             courseId = getIntent().getStringExtra("COURSE_ID");
         }
 
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-         //  getVideoViewCount();
 
     }
 
@@ -126,7 +144,7 @@ public class ExoplayerVideos extends BaseActivity {
                         viewCount = Integer.parseInt(response.getData().getData().get(0).getCount());
                     }
                 }
-               contentModel = daoHelper.getContentModel(playbackPosition,
+                contentModel = daoHelper.getContentModel(playbackPosition,
                         viewLimit,
                         viewCount,
                         modelLogin.getStudentData().getStudentId(),
@@ -146,7 +164,7 @@ public class ExoplayerVideos extends BaseActivity {
         if (player != null) {
             playWhenReady = false;
             player.stop();
-        }else {
+        } else {
             player = new SimpleExoPlayer.Builder(this).build();
             playerView.setPlayer(player);
             player.setPlayWhenReady(playWhenReady);
@@ -187,7 +205,7 @@ public class ExoplayerVideos extends BaseActivity {
         if (Util.SDK_INT < 24) {
             getPlayerPosition();
         }
-        if(contentModel != null){
+        if (contentModel != null) {
             final long lastPosition = playbackPosition;
             contentModel.setContentProgress(lastPosition);
             daoHelper.insertOrUpdate(contentModel);
@@ -205,7 +223,6 @@ public class ExoplayerVideos extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-
         if (getIntent().hasExtra("firebase/notice")) {
             player.stop();
             playWhenReady = false;

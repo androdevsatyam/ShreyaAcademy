@@ -290,7 +290,7 @@ Once you cancel, Your test is submitted automatically.</string>
     <string name="cont_with_google">Continue with Google</string>
     <string name="cont_with_facebook">Continue with Facebook</string>
     <string name="enter_your_phone">Enter your phone</string>
-    <string name="verificaiton_message">You will receive a 4 digit code for phone number verification.</string>
+    <string name="verificaiton_message">You will receive a 6 digit code for phone number verification.</string>
     <!--    <string name="united_state">United state</string>-->
     <string name="nepal">Nepal</string>
     <string name="verification">Verification</string>
@@ -298,9 +298,18 @@ Once you cancel, Your test is submitted automatically.</string>
     <string name="resend_otp">Resend OTP</string>
     <string name="done">Done</string>
 
-    <string name="facebook_app_id">3047751775462922</string>
+<!--    <string name="google_client_id">825881697941-cbm83fijdsk0u1h0qvbl4ovlcat8f8lo.apps.googleusercontent.com</string>-->
+    <string name="google_client_id">825881697941-56b8g915hp1nr3ii4i2hghp4ik18q71m.apps.googleusercontent.com</string>
+    <string name="google_client_scret">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</string>
+    <string name="google_key">AIzaSyDKvHD1nOjLwiLHteM57IO3u_S1q_ToA5s</string>
+
+    <string name="facebook_app_id">1196444737857759</string>
+    <string name="fb_login_protocol_scheme">fb1196444737857759</string>
+    <string name="facebook_client_token">6e35cef77ab91851805028b450ce59e0</string>
+
+    <!-- <string name="facebook_app_id">3047751775462922</string>
     <string name="fb_login_protocol_scheme">fb3047751775462922</string>
-    <string name="facebook_client_token">2ed35231f20c8198246b6a147ea07b80</string>
+    <string name="facebook_client_token">2ed35231f20c8198246b6a147ea07b80</string>-->
     <string name="renew_couse">Renew Couse</string>
     <string name="transfer_course">Transfer Course</string>
     <string name="rate_course">Rate course</string>

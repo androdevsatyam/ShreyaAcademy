@@ -18,10 +18,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:visibility="invisible"
         android:drawableTop="@drawable/process_image"
         android:id="@+id/loadTv"
         android:textSize="@dimen/_15sdp"
         android:text="@string/Please_wait..."/>
+
     <ImageButton
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
@@ -29,6 +31,6 @@
         android:padding="-2dp"
         android:background="#E9000000"
         android:src="@drawable/ic_baseline_screen_rotation_24"
-
         android:layout_alignParentEnd="true"/>
+
 </RelativeLayout>

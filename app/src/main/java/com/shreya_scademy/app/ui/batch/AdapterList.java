@@ -23,16 +23,16 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public  class AdapterList extends RecyclerView.Adapter<AdapterList.MyViewHolder> {
+public class AdapterList extends RecyclerView.Adapter<AdapterList.MyViewHolder> {
     View view;
     ArrayList<ModelCatSubCat.batchData.SubCategory.BatchData> list;
     Context context;
     String stuId;
 
- AdapterList(ArrayList<ModelCatSubCat.batchData.SubCategory.BatchData> list,Context context,String stuId) {
+    AdapterList(ArrayList<ModelCatSubCat.batchData.SubCategory.BatchData> list, Context context, String stuId) {
         this.list = list;
-        this.context=context;
-        this.stuId=stuId;
+        this.context = context;
+        this.stuId = stuId;
 
     }
 
@@ -49,28 +49,34 @@ public  class AdapterList extends RecyclerView.Adapter<AdapterList.MyViewHolder>
             Picasso.get().load("" + list.get(position).getBatchImage()).placeholder(R.drawable.noimage).into(holder.ivBatch);
         }
         if (list.get(position).getBatchType().equals("2")) {
-            if(!list.get(position).getBatchOfferPrice().isEmpty()){
+            if (!list.get(position).getBatchOfferPrice().isEmpty()) {
                 holder.tvOfferPrice.setText(list.get(position).getCurrencyDecimalCode() + " " + list.get(position).getBatchOfferPrice());
                 holder.tvPrice.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
-                holder.tvPrice.setText( list.get(position).getCurrencyDecimalCode() + " " + list.get(position).getBatchPrice());
-            }else{
+                holder.tvPrice.setText(list.get(position).getCurrencyDecimalCode() + " " + list.get(position).getBatchPrice());
+            } else {
                 holder.tvOffer.setVisibility(View.GONE);
                 holder.tvOfferPrice.setVisibility(View.GONE);
-                holder.tvPrice.setText( list.get(position).getCurrencyDecimalCode() + " " + list.get(position).getBatchPrice());
+                holder.tvPrice.setText(list.get(position).getCurrencyDecimalCode() + " " + list.get(position).getBatchPrice());
             }
         } else {
 
-            if(list.get(position).getBatchType().equals("1")){
+            if (list.get(position).getBatchType().equals("1")) {
                 holder.tvPrice.setVisibility(View.GONE);
                 holder.tvOffer.setText(context.getResources().getString(R.string.Free));
                 holder.tvOfferPrice.setText(context.getResources().getString(R.string.Free));
-           }
+            }
         }
-        holder.btnBuyNow.setText(""+context.getResources().getString(R.string.EnrollNow));
+        holder.btnBuyNow.setText("" + context.getResources().getString(R.string.EnrollNow));
         holder.batchTitle.setText("" + list.get(position).getBatchName());
         holder.batchSubTitle.setText("" + list.get(position).getDescription());
 
-
+        if (list.get(position).getDescription() != null) {
+            if (list.get(position).getDescription().isEmpty())
+                holder.batchSubTitle.setVisibility(View.GONE);
+            else
+                holder.batchSubTitle.setVisibility(View.VISIBLE);
+        }else
+            holder.batchSubTitle.setVisibility(View.GONE);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +88,7 @@ public  class AdapterList extends RecyclerView.Adapter<AdapterList.MyViewHolder>
 
 
                 } else {
-                    if(stuId.isEmpty()) {
+                    if (stuId.isEmpty()) {
                         if (ProjectUtils.checkConnection(context)) {
 
                             context.startActivity(new Intent(context, ActivityBatchDetails.class).putExtra("dataBatch",
@@ -90,19 +96,20 @@ public  class AdapterList extends RecyclerView.Adapter<AdapterList.MyViewHolder>
                         } else {
                             Toast.makeText(context, context.getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
                         }
-                    }else{
+                    } else {
                         context.startActivity(new Intent(context, ActivityBatchDetails.class).putExtra("dataBatch", list.get(position))
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK).putExtra("stuId",  stuId));
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK).putExtra("stuId", stuId));
                     }
 
                 }
             }
         });
-        if(!stuId.isEmpty()){
-        if(list.get(position).isPurchase_condition()){
-            holder.btnBuyNow.setText(context.getResources().getString(R.string.AlreadyEnrolled));
-            holder.btnBuyNow.setTextSize(12f);
-        }}
+        if (!stuId.isEmpty()) {
+            if (list.get(position).isPurchase_condition()) {
+                holder.btnBuyNow.setText(context.getResources().getString(R.string.AlreadyEnrolled));
+                holder.btnBuyNow.setTextSize(12f);
+            }
+        }
 
     }
 
@@ -113,8 +120,8 @@ public  class AdapterList extends RecyclerView.Adapter<AdapterList.MyViewHolder>
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivBatch;
-        CustomTextBold tvOfferPrice,tvOffer;
-        CustomSmallText batchTitle, batchSubTitle,tvPrice,btnBuyNow,rateBar;
+        CustomTextBold tvOfferPrice, tvOffer;
+        CustomSmallText batchTitle, batchSubTitle, tvPrice, btnBuyNow, rateBar;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -126,7 +133,7 @@ public  class AdapterList extends RecyclerView.Adapter<AdapterList.MyViewHolder>
             batchTitle = itemView.findViewById(R.id.batchTitle);
             batchSubTitle = itemView.findViewById(R.id.batchSubTitle);
             btnBuyNow = itemView.findViewById(R.id.btnBuyNow);
-           // rateBar = itemView.findViewById(R.id.ratingBarrr);
+            // rateBar = itemView.findViewById(R.id.ratingBarrr);
         }
     }
 }

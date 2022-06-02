@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">319337310374-bjafro9e5ai17a1ipk3kb32v0049atts.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">319337310374</string>
+    <string name="google_api_key" translatable="false">AIzaSyCwdnb6x8zDJ7r3n3hzBL53rwrml2hTiaI</string>
+    <string name="google_app_id" translatable="false">1:319337310374:android:8d31fc0e2970c875756c67</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCwdnb6x8zDJ7r3n3hzBL53rwrml2hTiaI</string>
+    <string name="google_storage_bucket" translatable="false">shreya-academy.appspot.com</string>
+    <string name="project_id" translatable="false">shreya-academy</string>
+</resources>

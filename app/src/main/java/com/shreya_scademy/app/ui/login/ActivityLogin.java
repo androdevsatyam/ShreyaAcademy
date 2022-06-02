@@ -34,6 +34,7 @@ import com.common.social.FacebookSignInTask;
 import com.common.social.GoogleSignInTask;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -63,7 +64,6 @@ import java.util.Locale;
 
 public class ActivityLogin extends AppCompatActivity implements View.OnClickListener {
 
-
     RelativeLayout btLogin;
     Context mContext;
     ModelLogin modelLogin;
@@ -82,6 +82,9 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     private ActivityLoginBinding binding;
     private GoogleSignInTask googleSignInTask;
     private FacebookSignInTask facebookSignInTask;
+    GoogleSignInOptions gso;
+    GoogleSignInClient googleSignInClient;
+    public static int RC_SIGN_IN=101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,19 +92,16 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         binding = ActivityLoginBinding.inflate(LayoutInflater.from(this));
         setContentView(binding.getRoot());
 
-
         mContext = ActivityLogin.this;
         sharedPref = SharedPref.getInstance(mContext);
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
-
-
+        googleSignInTask = new GoogleSignInTask(this);
 
         initial();
     }
 
 
     private void initial() {
-
         btLogin = findViewById(R.id.btLogin);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignIn.setOnClickListener(this);
@@ -112,10 +112,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
             @Override
             public void onRefresh() {
                 if (ProjectUtils.checkConnection(mContext)) {
-
                     languageDynamic();
-
-
                 } else {
                     swipeRefreshLayout.setRefreshing(false);
                     Toast.makeText(mContext, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
@@ -162,11 +159,40 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
             });
         });
 
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso);
+
         binding.btnGoogleSignIn.setOnClickListener(v -> {
+           /* GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+            if(account!=null){
+                Toast.makeText(ActivityLogin.this, "Allready Signed In", Toast.LENGTH_SHORT).show();
+//                updateUI(account);
+            }*/
+
+//            Intent signInIntent = googleSignInClient.getSignInIntent();
+//            startActivityForResult(signInIntent, RC_SIGN_IN);
 
             Intent intent = googleSignInTask.signIn(account -> {
                 if (account != null) {
-                    Toast.makeText(ActivityLogin.this, "Google signed successfull", Toast.LENGTH_SHORT).show();
+                    FirebaseInstanceId.getInstance().getInstanceId()
+                            .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                                @Override
+                                public void onComplete(Task<InstanceIdResult> task) {
+                                    if (!task.isSuccessful()) {
+                                        return;
+                                    }
+                                    if (ProjectUtils.checkConnection(mContext)) {
+                                        loginApi(task.getResult().getToken());
+                                    } else {
+                                        Toast.makeText(mContext, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                    Toast.makeText(ActivityLogin.this, "Signed In with "+account.getEmail(), Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ActivityLogin.this, "Google signed error", Toast.LENGTH_SHORT).show();
                 }
@@ -278,12 +304,9 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
-
-
     }
 
     private void loginApi(String token) {
-
         ProjectUtils.showProgressDialog(mContext, false, getResources().getString(R.string.Loading___));
 
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_LOGIN)
@@ -348,24 +371,15 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                                 @Override
                                 public void onComplete(Task<InstanceIdResult> task) {
                                     if (!task.isSuccessful()) {
-
                                         return;
-
                                     }
                                     if (ProjectUtils.checkConnection(mContext)) {
-
                                         loginApi(task.getResult().getToken());
-
-
                                     } else {
-
                                         Toast.makeText(mContext, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
                                     }
-
-
                                 }
                             });
-
                 } else {
                     Toast.makeText(mContext, getResources().getString(R.string.Please_Enter_Password), Toast.LENGTH_SHORT).show();
                 }
@@ -376,8 +390,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
             if (v.getId() == R.id.tvMove) {
                 Intent intent = new Intent(mContext, ActivityBatch.class);
                 startActivity(intent);
-
-
             } else {
                 if (v.getId() == R.id.tvOrLoginWith) {
                     if (modelLogin != null) {
@@ -394,7 +406,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         }
         if (v.getId() == R.id.forgotPass) {
             startActivity(new Intent(mContext, ActivityForgotPassword.class));
-
         }
         if(v.getId() == R.id.btnSignIn) {
             startActivity(new Intent(mContext, ActivitySignUp.class).putExtra("login","Withoutbatch"));
@@ -403,7 +414,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     private void exitAppDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setMessage(getResources().getString(R.string.Are_you_sure_you_want_to_close_this_app))
-
                 .setCancelable(false)
                 .setPositiveButton(getResources().getString(R.string.Yes), new DialogInterface.OnClickListener() {
                     @Override
@@ -428,14 +438,11 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onBackPressed() {
-
-
         exitAppDialog();
     }
 
 
     void infoUpdate() {
-
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_HOME_LAST_LOGIN_TIME)
                 .addBodyParameter(AppConsts.STUDENT_ID, "" + modelLogin.getStudentData().getStudentId())
@@ -443,31 +450,21 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                 .getAsString(new StringRequestListener() {
                     @Override
                     public void onResponse(String response) {
-
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             if (jsonObject.getString("status").contains("true")) {
                                 Calendar cal = Calendar.getInstance();
                                 String format = new SimpleDateFormat("E, MMM d, yyyy").format(cal.getTime());
                                 sharedPref.setDate("date", "" + format);
-
-
                             }
                         } catch (JSONException e) {
-
-
                             e.printStackTrace();
                         }
-
                     }
-
                     @Override
                     public void onError(ANError anError) {
                         Toast.makeText(mContext, getResources().getString(R.string.Try_again), Toast.LENGTH_SHORT).show();
-
                     }
                 });
     }
-
-
 }

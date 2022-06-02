@@ -32,6 +32,7 @@ public class ActivityVimeoVideo extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         setContentView(R.layout.activity_vimeo_video);
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getRealMetrics(displaymetrics);
@@ -43,6 +44,9 @@ public class ActivityVimeoVideo extends BaseActivity {
             videoUrl = getIntent().getStringExtra("WEB_URL");
             vId=getIntent().getStringExtra("vId");
         }
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        rotateBtn.setVisibility(View.GONE);
 
         rotateBtn = findViewById(R.id.rotateBtn);
         rotateBtn.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +93,6 @@ public class ActivityVimeoVideo extends BaseActivity {
 
             }
         }
-
 
         webView.setScrollContainer(false);
         webView.setFocusable(false);

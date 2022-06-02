@@ -17,8 +17,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,20 +40,21 @@ import java.util.Locale;
 
 
 public class ActivityMultiBatchHome extends BaseActivity {
-    RecyclerView  rlBatchRecomm;
+    RecyclerView rlBatchRecomm;
     Context context;
     ImageView noResult;
     EditText searchBarEditText;
     ModelLogin modelLogin;
     SharedPref sharedPref;
-    TextView settings,myBatch;
+    TextView settings, myBatch;
     ArrayList<ModelCatSubCat.batchData> catSubList = new ArrayList<>();
     AdapterCatPage adapterCat;
     boolean isLoading = false;
     int pageStart = 0, pageEnd = 3;
-    String searchTag="";
+    String searchTag = "";
 
     private ImageButton imgBtnContact;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +66,10 @@ public class ActivityMultiBatchHome extends BaseActivity {
         if (!ProjectUtils.checkConnection(context)) {
             Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
         }
-        if(modelLogin != null) {
+        if (modelLogin != null) {
             if (modelLogin.getStudentData() != null) {
                 if (modelLogin.getStudentData().getLanguageName().equalsIgnoreCase("arabic")) {
                     //manually set Directions
-
                     getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
                     Configuration configuration = getResources().getConfiguration();
                     configuration.setLayoutDirection(new Locale("fa"));
@@ -109,17 +107,12 @@ public class ActivityMultiBatchHome extends BaseActivity {
             }
         }
         setContentView(R.layout.activity_multi_batch);
-
-
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
         initial();
-
     }
 
     private void exitAppDialog() {
@@ -164,9 +157,10 @@ public class ActivityMultiBatchHome extends BaseActivity {
 
 
     }
+
     @Override
     public void onBackPressed() {
-       // super.onBackPressed();
+        // super.onBackPressed();
         exitAppDialog();
     }
 
@@ -183,16 +177,16 @@ public class ActivityMultiBatchHome extends BaseActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() > 2) {
-                    searchTag =s.toString();
-                    catSubList=new ArrayList<>();
+                    searchTag = s.toString();
+                    catSubList = new ArrayList<>();
 
                     getBatches();
                 }
-                if(s.length() <= 0){
-                    pageStart=0;
-                    pageEnd=3;
-                    searchTag="";
-                    isLoading=false;
+                if (s.length() <= 0) {
+                    pageStart = 0;
+                    pageEnd = 3;
+                    searchTag = "";
+                    isLoading = false;
                     getBatches();
 
                 }
@@ -226,17 +220,14 @@ public class ActivityMultiBatchHome extends BaseActivity {
         imgBtnContact.setOnClickListener(view -> startActivity(new Intent(context, ContactActivity.class)));
 
 
-
-
         getBatches();
     }
 
     void getBatches() {
-        if(!searchTag.isEmpty()){
-            pageStart=0;
-            pageEnd=100;
+        if (!searchTag.isEmpty()) {
+            pageStart = 0;
+            pageEnd = 100;
         }
-
         AndroidNetworking.get(AppConsts.BASE_URL + AppConsts.API_GET_BATCH_FEE)
                 .addPathParameter(AppConsts.START, "" + pageStart)
                 .addPathParameter(AppConsts.LENGTH, "" + pageEnd)
@@ -247,31 +238,28 @@ public class ActivityMultiBatchHome extends BaseActivity {
                 ).getAsObject(ModelCatSubCat.class, new ParsedRequestListener<ModelCatSubCat>() {
             @Override
             public void onResponse(ModelCatSubCat response) {
-
                 if (response.getStatus().equalsIgnoreCase("true")) {
-
-
                     if (pageStart == 0) {
                         catSubList = response.getBatchData();
                         initAdapter();
                         //initScrollListener();
-                        if(catSubList.size() < 1){
+                        if (catSubList.size() < 1) {
                             noResult.setVisibility(View.VISIBLE);
                         }
                     } else {
-                        if(searchTag.isEmpty()){
+                        if (searchTag.isEmpty()) {
                             catSubList.addAll(response.getBatchData());
                             adapterCat.notifyDataSetChanged();
                             isLoading = false;
-                        }else{
+                        } else {
                             catSubList = response.getBatchData();
                             initAdapter();
-                           // initScrollListener();
+                            // initScrollListener();
                         }
                     }
 
 
-                }else{
+                } else {
                     noResult.setVisibility(View.VISIBLE);
                 }
             }
@@ -285,11 +273,12 @@ public class ActivityMultiBatchHome extends BaseActivity {
         });
     }
 
+
     private void initAdapter() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL, false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
         rlBatchRecomm.setLayoutManager(linearLayoutManager);
 
-   adapterCat = new AdapterCatPage(catSubList,getApplicationContext(),""+modelLogin.getStudentData().getStudentId() );
+        adapterCat = new AdapterCatPage(catSubList, getApplicationContext(), "" + modelLogin.getStudentData().getStudentId());
         rlBatchRecomm.setAdapter(adapterCat);
 
     }
@@ -334,7 +323,7 @@ public class ActivityMultiBatchHome extends BaseActivity {
                 adapterCat.notifyItemRemoved(scrollPosition);
                 int currentSize = scrollPosition;
                 int nextLimit = currentSize + 3;
-                pageStart = currentSize-1;
+                pageStart = currentSize - 1;
                 pageEnd = nextLimit;
 
                 getBatches();
@@ -344,13 +333,11 @@ public class ActivityMultiBatchHome extends BaseActivity {
                 }
 
 
-
             }
         }, 2000);
 
 
     }
-
 
 
 }

@@ -15,9 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@drawable/back_ui"
-        android:paddingTop="8dp"
-
-        />
+        android:paddingTop="8dp" />
 
 
     <com.shreya_scademy.app.utils.widgets.CustomTextExtraBold
@@ -368,7 +366,6 @@
 
         </androidx.core.widget.NestedScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -58,7 +58,6 @@ import java.security.NoSuchAlgorithmException;
 
 public class ActivitySignUp extends BaseActivity implements View.OnClickListener {
 
-
     private static final String TAG = "ActivitySignUp";
     Context context;
     CustomEditText etUserName, etUserMobile, etUserEmail;
@@ -114,17 +113,129 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                     if (userId == null) {
                         Toast.makeText(ActivitySignUp.this, "Facebook login error", Toast.LENGTH_SHORT).show();
                     } else {
+                      /*  FirebaseInstanceId.getInstance().getInstanceId()
+                                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                                    @Override
+                                    public void onComplete(Task<InstanceIdResult> task) {
+                                        if (!task.isSuccessful()) {
+                                            return;
+                                        }
+*/
+                                        if (getIntent().hasExtra("login")) {
+                                            if (getIntent().getStringExtra("login").equalsIgnoreCase("Withoutbatch")) {
+
+
+                                                ProjectUtils.showProgressDialog(context, true, getResources().getString(R.string.Loading___));
+                                                AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_STUDENT_REGISTRATION)
+                                                        .addBodyParameter(AppConsts.NAME, "" + etUserName.getText().toString())
+                                                        .addBodyParameter(AppConsts.EMAIL, "" + etUserEmail.getText().toString())
+                                                        .addBodyParameter(AppConsts.MOBILE, "" + etUserMobile.getText().toString())
+                                                        .addBodyParameter(AppConsts.TOKEN, "" + userId)
+                                                        .addBodyParameter(AppConsts.VERSION_CODE, "" + versionCode)
+                                                        .build()
+                                                        .getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
+                                                            @Override
+                                                            public void onResponse(ModelLogin response) {
+                                                                if (response.getStatus().equalsIgnoreCase("true")) {
+
+                                                                    sharedPref.setUser(AppConsts.STUDENT_DATA, response);
+                                                                    sharedPref.setBooleanValue(IS_REGISTER, true);
+                                                                    modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
+                                                                    Intent intent = new Intent(context, ActivityPaymentGateway.class).putExtra("login", "Withoutbatch");
+                                                                    intent.putExtra("name", "" + etUserName.getText().toString());
+                                                                    intent.putExtra("email", "" + etUserEmail.getText().toString());
+                                                                    intent.putExtra("mobile", "" + etUserMobile.getText().toString());
+                                                                    intent.putExtra("token", "" + userId);
+                                                                    intent.putExtra("versionCode", "" + versionCode);
+                                                                    startActivity(intent);
+                                                                    ProjectUtils.pauseProgressDialog();
+
+                                                                } else {
+                                                                    ProjectUtils.pauseProgressDialog();
+                                                                    Toast.makeText(context, "" + response.getMsg(), Toast.LENGTH_SHORT).show();
+                                                                }
+
+                                                            }
+
+                                                            @Override
+                                                            public void onError(ANError anError) {
+                                                                ProjectUtils.pauseProgressDialog();
+                                                                Log.v("saloni123", "saloni  " + anError);
+                                                            }
+                                                        });
+                                            }
+                                        } else {
+                                            Log.v("saloni1234", "==================goes right");
+                                            apiSignUp(userId);
+                                        }
+//                                    }
+//                                });
                         Toast.makeText(ActivitySignUp.this, "User id " + userId, Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         });
+
         binding.btnGoogleSignIn.setOnClickListener(v -> {
             Intent intent = googleSignInTask.signIn(account -> {
                 if (account != null) {
-                    Toast.makeText(context, "Google signed successfull", Toast.LENGTH_SHORT).show();
+                    FirebaseInstanceId.getInstance().getInstanceId()
+                            .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                                @Override
+                                public void onComplete(Task<InstanceIdResult> task) {
+                                    if (!task.isSuccessful()) {
+                                        return;
+                                    }
+                                    if (getIntent().hasExtra("login")) {
+                                        if (getIntent().getStringExtra("login").equalsIgnoreCase("Withoutbatch")) {
+                                            ProjectUtils.showProgressDialog(context, true, getResources().getString(R.string.Loading___));
+                                            AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_STUDENT_REGISTRATION)
+                                                    .addBodyParameter(AppConsts.NAME, "" +account.getDisplayName())
+                                                    .addBodyParameter(AppConsts.EMAIL, "" + account.getEmail())
+                                                    .addBodyParameter(AppConsts.MOBILE, "" + "0000000000")
+                                                    .addBodyParameter(AppConsts.TOKEN, "" + task.getResult().getToken())
+                                                    .addBodyParameter(AppConsts.VERSION_CODE, "" + versionCode)
+                                                    .build()
+                                                    .getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
+                                                        @Override
+                                                        public void onResponse(ModelLogin response) {
+                                                            if (response.getStatus().equalsIgnoreCase("true")) {
+
+                                                                sharedPref.setUser(AppConsts.STUDENT_DATA, response);
+                                                                sharedPref.setBooleanValue(IS_REGISTER, true);
+                                                                modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
+                                                                Intent intent = new Intent(context, ActivityPaymentGateway.class).putExtra("login", "Withoutbatch");
+                                                                intent.putExtra("name", "" + account.getDisplayName());
+                                                                intent.putExtra("email", "" + account.getEmail());
+                                                                intent.putExtra("mobile", "" + "0000000000");
+                                                                intent.putExtra("token", "" + task.getResult().getToken());
+                                                                intent.putExtra("versionCode", "" + versionCode);
+                                                                startActivity(intent);
+                                                                ProjectUtils.pauseProgressDialog();
+
+                                                            } else {
+                                                                googleSignInTask.signOut();
+                                                                ProjectUtils.pauseProgressDialog();
+                                                                Toast.makeText(context, "" + response.getMsg()+"\nUse Another Email or Login", Toast.LENGTH_LONG).show();
+                                                            }
+
+                                                        }
+
+                                                        @Override
+                                                        public void onError(ANError anError) {
+                                                            ProjectUtils.pauseProgressDialog();
+                                                            Log.v("saloni123", "saloni  " + anError);
+                                                        }
+                                                    });
+                                        }
+                                    } else {
+                                        Log.v("saloni1234", "==================goes right");
+                                        apiSignUp(task.getResult().getToken());
+                                    }
+                                }
+                            });
                 } else {
-                    Toast.makeText(context, "Google signed error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivitySignUp.this, "Unable to use Google", Toast.LENGTH_SHORT).show();
                 }
             });
             mGetContent.launch(intent);
@@ -146,6 +257,7 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                         case Activity.RESULT_OK:
                             Intent intent = result.getData();
                             googleSignInTask.signInIntent(intent);
+
                             break;
                         case Activity.RESULT_CANCELED:
                             break;
@@ -211,16 +323,12 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
             case R.id.tvMove:
                 Intent intent = new Intent(context, ActivityBatch.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.loginTv:
                 startActivity(new Intent(context, ActivityLogin.class));
                 break;
             case R.id.btnSignup:
                 if (ProjectUtils.checkConnection(context)) {
-
-
                     if (etUserName.getText().toString().isEmpty()) {
                         etUserName.setError(getResources().getString(R.string.Please_Enter_name));
                         etUserName.requestFocus();
@@ -233,8 +341,6 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                             if (etUserMobile.getText().toString().isEmpty()) {
                                 etUserMobile.setError("" + getResources().getString(R.string.EnterMobile));
                                 etUserMobile.requestFocus();
-
-
                             } else {
                                 if (isValidEmail(etUserEmail.getText().toString())) {
                                     if (etUserMobile.getText().toString().length() > 6) {
@@ -243,9 +349,7 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                                                     @Override
                                                     public void onComplete(Task<InstanceIdResult> task) {
                                                         if (!task.isSuccessful()) {
-
                                                             return;
-
                                                         }
 
                                                         if (getIntent().hasExtra("login")) {
@@ -297,12 +401,8 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                                                             Log.v("saloni1234", "==================goes right");
                                                             apiSignUp(task.getResult().getToken());
                                                         }
-
-
                                                     }
                                                 });
-
-
                                     } else {
                                         Toast.makeText(context, "" + getResources().getString(R.string.Entervalidnumber), Toast.LENGTH_SHORT).show();
                                     }

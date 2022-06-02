@@ -14,6 +14,7 @@ import com.facebook.ProfileTracker;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 
@@ -36,7 +37,7 @@ public class FacebookSignInTask {
 
     public void signIn(Activity activity, FacebookSignInCallBack facebookSignInCallBack) {
         isFacebookLogin = true;
-        LoginManager.getInstance().logInWithReadPermissions(activity, Collections.singletonList("public_profile"));
+        LoginManager.getInstance().logInWithReadPermissions(activity, Arrays.asList("public_profile","email")/*Collections.singletonList("public_profile","email")*/);
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
         if (isLoggedIn) {

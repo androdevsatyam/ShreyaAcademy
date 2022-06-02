@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: artifacts:commonlib:unspecified">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/commonlib/build/.transforms/3b278ca6223291482d6b9dae3915077e/jetified-commonlib/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/commonlib/build/.transforms/ebd445b7631009c3b8b34d22b4c02e3f/jetified-commonlib/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/commonlib/build/.transforms/3b278ca6223291482d6b9dae3915077e/jetified-commonlib/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/commonlib/build/.transforms/3b278ca6223291482d6b9dae3915077e/jetified-commonlib/res" />
-      <root url="file://$PROJECT_DIR$/commonlib/build/.transforms/3b278ca6223291482d6b9dae3915077e/jetified-commonlib/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/commonlib/build/.transforms/ebd445b7631009c3b8b34d22b4c02e3f/jetified-commonlib/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/commonlib/build/.transforms/ebd445b7631009c3b8b34d22b4c02e3f/jetified-commonlib/res" />
+      <root url="file://$PROJECT_DIR$/commonlib/build/.transforms/ebd445b7631009c3b8b34d22b4c02e3f/jetified-commonlib/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

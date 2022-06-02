@@ -3,30 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_width="@dimen/_188sdp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_180sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_height="wrap_content">
 
-        >
-
-        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/back_counthome"
             app:cardCornerRadius="@dimen/_9sdp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/_35sdp">
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp">
 
                 <ImageView
                     android:id="@+id/ivBatch"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_80sdp"
+                    android:layout_height="@dimen/_120sdp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/noimage" />
 
@@ -50,11 +49,10 @@
                     android:layout_below="@+id/ivBatch"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_8sdp"
-                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
-
 
                     <com.shreya_scademy.app.utils.widgets.CustomTextBold
                         android:id="@+id/tvOfferPrice"
@@ -69,6 +67,7 @@
                         android:id="@+id/tvPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
                         android:gravity="center"
                         android:textColor="@color/gray"
                         android:textSize="@dimen/_11sdp" />
@@ -86,17 +85,28 @@
                     android:gravity="start"
                     android:singleLine="true"
                     android:textAlignment="viewStart"
-
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/_13sdp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/batchTitle"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:rating="3" />
 
                 <com.shreya_scademy.app.utils.widgets.CustomSmallText
                     android:id="@+id/batchSubTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/batchTitle"
+                    android:layout_below="@+id/ratingBar"
                     android:layout_marginStart="@dimen/_8sdp"
                     android:layout_marginTop="-4dp"
+                    android:visibility="gone"
                     android:layout_marginEnd="@dimen/_6sdp"
                     android:ellipsize="end"
                     android:gravity="start"
@@ -104,17 +114,6 @@
                     android:textAlignment="viewStart"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
-
-                <RatingBar
-                    android:id="@+id/ratingBar"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/batchSubTitle"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:rating="3" />
-
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -122,11 +121,10 @@
             android:id="@+id/btLogin"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/container"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_6sdp"
-            android:layout_marginBottom="@dimen/_9sdp"
             android:elevation="@dimen/_6sdp">
-
 
             <com.shreya_scademy.app.utils.widgets.CustomSmallText
                 android:id="@+id/btnBuyNow"

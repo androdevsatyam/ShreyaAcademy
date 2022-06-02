@@ -105,7 +105,7 @@ public class ActivityHome extends BaseActivity {
     SwipeRefreshLayout swipe;
     LinearLayout llLive, llExams, llMockPapers, llExtraClass;
     CustomSmallText nameTv;
-    ImageView liveClassImage, selectIv,ivBack;
+    ImageView liveClassImage, selectIv, ivBack;
     TextView countNotice;
     ImageView settings, home;
 
@@ -117,8 +117,6 @@ public class ActivityHome extends BaseActivity {
         mContext = ActivityHome.this;
         sharedPref = SharedPref.getInstance(mContext);
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
-
-
 
 
         try {
@@ -185,7 +183,7 @@ public class ActivityHome extends BaseActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 Intent intent = new Intent(mContext, ActivityMultiBatchHome.class);
+                Intent intent = new Intent(mContext, ActivityMultiBatchHome.class);
                 startActivity(intent);
             }
         });
@@ -312,7 +310,7 @@ public class ActivityHome extends BaseActivity {
                                 arrayList.add(new ModelDynamicNotices(getResources().getString(R.string.NewBooks) + " (" + response.getAddNewBook().size() + ")", "" + response.getAddNewBook().get(0).getTitle(), "" + response.getAddNewBook().get(0).getSubject() + "\n" + response.getAddNewBook().get(0).getTopic(), "", "", ""));
                             }
                             if (response.getAddNewNotes().size() > 0) {
-                                arrayList.add(new ModelDynamicNotices(getResources().getString(R.string.NewNotes)+ " (" + response.getAddNewNotes().size() + ")", "" + response.getAddNewNotes().get(0).getTitle() + "\n" + response.getAddNewNotes().get(0).getSubject(), "" + response.getAddNewNotes().get(0).getTopic(), "" + response.getAddNewNotes().get(0).getTopic(), "", ""));
+                                arrayList.add(new ModelDynamicNotices(getResources().getString(R.string.NewNotes) + " (" + response.getAddNewNotes().size() + ")", "" + response.getAddNewNotes().get(0).getTitle() + "\n" + response.getAddNewNotes().get(0).getSubject(), "" + response.getAddNewNotes().get(0).getTopic(), "" + response.getAddNewNotes().get(0).getTopic(), "", ""));
                             }
                             if (response.getAddOldPaper().size() > 0) {
                                 arrayList.add(new ModelDynamicNotices(getResources().getString(R.string.OldPapersAdded) + " (" + response.getAddOldPaper().size() + ")", "" + response.getAddOldPaper().get(0).getTitle(), "" + response.getAddOldPaper().get(0).getSubject() + "\n" + response.getAddOldPaper().get(0).getTopic(), "" + response.getAddOldPaper().get(0).getTopic(), "", ""));
@@ -542,8 +540,6 @@ public class ActivityHome extends BaseActivity {
 
 
     void topScorer() {
-
-
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_GET_TOP_SCORER)
                 .addBodyParameter(AppConsts.BATCH_ID, modelLogin.getStudentData().getBatchId())
                 .build()
@@ -583,15 +579,12 @@ public class ActivityHome extends BaseActivity {
     }
 
     void apiMeetingData() {
-
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_LIVE_CLASS_DATA)
                 .addBodyParameter(AppConsts.BATCH_ID, modelLogin.getStudentData().getBatchId())
                 .build()
                 .getAsString(new StringRequestListener() {
                     @Override
                     public void onResponse(String response) {
-
-
                         try {
                             JSONObject jsonObject = new JSONObject(response);
 
@@ -610,22 +603,15 @@ public class ActivityHome extends BaseActivity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-
                     }
 
                     @Override
                     public void onError(ANError anError) {
-
-
                     }
                 });
     }
 
-
-
     void apiLiveClass() {
-
-
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_CHECK_ACTIVE_LIVE_CLASS)
                 .addBodyParameter(AppConsts.BATCH_ID, modelLogin.getStudentData().getBatchId())
                 .build()
@@ -643,8 +629,6 @@ public class ActivityHome extends BaseActivity {
                                 llLive.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-
-
                                         if (!numberMeeting.isEmpty()) {
                                             mContext.startActivity(new Intent(mContext, ActivityLive.class).
                                                     putExtra("meetingId", "" + numberMeeting).putExtra("meetingPassword", "" + passwordMeeting).putExtra("sdkKey", "" + sdkKey)
@@ -653,30 +637,22 @@ public class ActivityHome extends BaseActivity {
                                     }
                                 });
                             }
-
                         } else {
                             llLive.setVisibility(View.GONE);
                             tvLiveClasses.setVisibility(View.GONE);
                         }
-
-
                     }
 
                     @Override
                     public void onError(ANError anError) {
-
                     }
                 });
-
-
     }
-
 
     private void addDataToList() {
         listData = new ArrayList<>();
-
-        listData.add( getResources().getString(R.string.Announcements));
-        listData.add( getResources().getString(R.string.Live_class));
+        listData.add(getResources().getString(R.string.Announcements));
+        listData.add(getResources().getString(R.string.Live_class));
         listData.add(getResources().getString(R.string.mcq));
         listData.add(getResources().getString(R.string.Upcoming_Exams));
         listData.add(getResources().getString(R.string.VideoLectures));
@@ -718,15 +694,12 @@ public class ActivityHome extends BaseActivity {
 
 
         AlertDialog alertDialog = builder.create();
-
-
         alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface arg0) {
                 if (modelLogin.getStudentData().getLanguageName().equalsIgnoreCase("arabic")) {
                     alertDialog.findViewById(android.R.id.message).setTextDirection(View.TEXT_DIRECTION_RTL);
                 }
-
                 alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                 alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
@@ -753,17 +726,12 @@ public class ActivityHome extends BaseActivity {
 
         public AdapterList(ArrayList<ModelDynamicNotices> list) {
             this.list = list;
-
-
         }
-
 
         @Override
         public HolderAdapterQuestionList onCreateViewHolder(ViewGroup viewGroup, int i) {
             view = LayoutInflater.from(mContext).inflate(R.layout.dynamic, viewGroup, false);
-
             return new HolderAdapterQuestionList(view);
-
         }
 
         @Override

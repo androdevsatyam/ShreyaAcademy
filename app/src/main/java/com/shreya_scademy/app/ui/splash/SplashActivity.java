@@ -2,9 +2,14 @@ package com.shreya_scademy.app.ui.splash;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
@@ -16,6 +21,8 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -47,6 +54,8 @@ import com.shreya_scademy.app.utils.sharedpref.SharedPref;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
 
 
@@ -66,13 +75,29 @@ public class SplashActivity extends BaseLockActivity {
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
 
+        // Add code to print out the key hash
+       /* try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.shreya_scademy.app",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.d("KeyHash:","error="+e.getLocalizedMessage());
+
+        } catch (NoSuchAlgorithmException e) {
+            Log.d("KeyHash:","error="+e.getLocalizedMessage());
+
+        }*/
+
         setContentView(R.layout.activity_splash);
         mContext = SplashActivity.this;
 
-
         sharedPref = SharedPref.getInstance(mContext);
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
-
 
         progressBar = findViewById(R.id.progressBar);
         swipe = findViewById(R.id.swipe);
@@ -234,10 +259,7 @@ public class SplashActivity extends BaseLockActivity {
     }
 
     private void checkStatus() {
-
-
         if (sharedPref.getBooleanValue(AppConsts.IS_REGISTER)) {
-
             if (modelLogin != null) {
                 if (MyFirebaseMessagingService.WHERE != null) {
                     moveToActivity(MyFirebaseMessagingService.WHERE, MyFirebaseMessagingService.BatchName, MyFirebaseMessagingService.BatchID);
@@ -247,17 +269,13 @@ public class SplashActivity extends BaseLockActivity {
                     startActivity(intent);
                     finish();
                 }
-
-
             } else {
-
                 Intent intent = new Intent(mContext, ActivityBatch.class);
                 intent.putExtra(AppConsts.IS_SPLASH, "true");
                 startActivity(intent);
                 finish();
             }
         } else {
-
             Intent intent = new Intent(mContext, ActivityBatch.class);
             intent.putExtra(AppConsts.IS_SPLASH, "true");
             startActivity(intent);

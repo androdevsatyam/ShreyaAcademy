@@ -68,18 +68,13 @@ public class ActivityBatchDetails extends BaseActivity implements View.OnClickLi
     Button btnSubmit;
     RatingBar ratingBar;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_batch_details);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         context = ActivityBatchDetails.this;
-
         init();
-
-
-
 
     }
 
@@ -201,7 +196,6 @@ public class ActivityBatchDetails extends BaseActivity implements View.OnClickLi
             modelCounts = new ArrayList<>();
             showPreview.addView(subject);
             if (batchData.getBatchSubject().get(l).getChapter() != null) {
-
                 for (int chp = 0; chp < batchData.getBatchSubject().get(l).getChapter().size(); chp++) {
                     LinearLayout linearLayoutChapter=new LinearLayout(context);
                     TextView chapter = new CustomTextExtraBold(context);
@@ -288,15 +282,10 @@ public class ActivityBatchDetails extends BaseActivity implements View.OnClickLi
                         imageView.setPadding(5, 8, 0, 0);
                         imageView.setImageDrawable(getDrawable(R.drawable.video_image));
 
-
-
-
                         relativeLayout.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-
                             try{
-
                                     if (batchData.getBatchSubject().get(modelCounts.get(relativeLayout.getId()).getVideoid()).getChapter().get(modelCounts.get(relativeLayout.getId()).getChapterid()).getVideoLectures().get(relativeLayout.getId()).getPreviewType().equalsIgnoreCase("preview")) {
                                         if (batchData.getBatchSubject().get(modelCounts.get(relativeLayout.getId()).getVideoid()).getChapter().get(modelCounts.get(relativeLayout.getId()).getChapterid()).getVideoLectures().get(relativeLayout.getId()).getVideoType().equalsIgnoreCase("youtube")) {
                                             startActivity(new Intent(context, ActivityYoutubeVideo.class)
@@ -470,11 +459,15 @@ public class ActivityBatchDetails extends BaseActivity implements View.OnClickLi
 
     }
 
-//    void apiSignUp(String token) {
+//    void apiSignUp() {
 //        ProjectUtils.showProgressDialog(context, false, getResources().getString(R.string.Loading___));
 //
-//        AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_CHECK_BATCH)
-//                .addBodyParameter(AppConsts.EMAIL, "" + edtName.getText().toString()).build()
+//        AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_ADD_USER_RATE)
+//                .addBodyParameter("user_id", )
+//                .addBodyParameter("rate", ratingBar.toString())
+//                .addBodyParameter("content_id", )
+//                .addBodyParameter("comment", edtComment.getText().toString())
+//                .build()
 //                .getAsString(new StringRequestListener() {
 //                    @Override
 //                    public void onResponse(String response) {

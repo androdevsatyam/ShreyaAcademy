@@ -41,6 +41,10 @@ public class GoogleSignInTask {
         handleSignInResult(task);
     }
 
+    public void signOut(){
+        mGoogleSignInClient.signOut();
+    }
+
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);

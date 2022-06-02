@@ -11,12 +11,6 @@ import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
-/**
- * @Authoer Dharmesh
- * @Date 06-03-2022
- * <p>
- * Information
- **/
 public class NetworkManager {
 
     private MutableLiveData<Boolean> networkData;

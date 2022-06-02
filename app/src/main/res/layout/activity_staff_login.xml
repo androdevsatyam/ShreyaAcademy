@@ -12,18 +12,20 @@
         android:id="@+id/txtSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Staff LOGIN"
+        android:text="STAFF LOGIN"
         android:textColor="@color/colorPrimary"
-        android:textSize="20dp"
+        android:textSize="24dp"
+        app:layout_constraintVertical_bias="0.3"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintTop_toTopOf="parent"
         />
 
         <!-- Linear layout as parent layout-->
         <LinearLayout
+            android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -40,17 +42,7 @@
 
             <!-- Edit text to allow user to type name
                 of item he/she wants to search-->
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/edt_Name"
-                android:hint="Name"
-                android:padding="12dp"
-                android:singleLine="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@android:drawable/editbox_background"
-                />
+
 
             <EditText
                 android:layout_width="match_parent"
@@ -64,19 +56,13 @@
                 android:background="@android:drawable/editbox_background"
                 />
 
-            <RatingBar
-                android:id="@+id/rateComment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edt_Email"
-                android:layout_marginTop="8dp" />
 
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/edt_Comment"
-                android:hint="Comment"
+                android:hint="Password"
                 android:padding="12dp"
                 android:singleLine="true"
                 android:layout_marginTop="8dp"
@@ -98,7 +84,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/colorPrimary"
                 android:textColor="@color/white"
-                android:text="Submit"/>
+                android:text="Login"/>
 
         </LinearLayout>
 

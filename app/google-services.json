@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "218496751527",
-    "project_id": "loginlogout-f4b2b",
-    "storage_bucket": "loginlogout-f4b2b.appspot.com"
+    "project_number": "319337310374",
+    "project_id": "shreya-academy",
+    "storage_bucket": "shreya-academy.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:218496751527:android:84aa74bcefadbbdfb50882",
+        "mobilesdk_app_id": "1:319337310374:android:8d31fc0e2970c875756c67",
         "android_client_info": {
-          "package_name": "com.example.googleloginlogout"
+          "package_name": "com.shreya_scademy.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "218496751527-7pj0kl8b05l7isoqat8po6r7qeeca8md.apps.googleusercontent.com",
+          "client_id": "319337310374-je92b78kollv98gassvktvp5sp4ma43h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shreya_scademy.app",
+            "certificate_hash": "408aa06060fd974a33ff04c80f7f4de3b292d027"
+          }
+        },
+        {
+          "client_id": "319337310374-bjafro9e5ai17a1ipk3kb32v0049atts.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDXnV3q_9VPp3WrqCa8FmEOwB6c7UZBXUU"
+          "current_key": "AIzaSyCwdnb6x8zDJ7r3n3hzBL53rwrml2hTiaI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "218496751527-7pj0kl8b05l7isoqat8po6r7qeeca8md.apps.googleusercontent.com",
+              "client_id": "319337310374-bjafro9e5ai17a1ipk3kb32v0049atts.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -38,43 +38,40 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class ActivityAllBatch extends BaseActivity implements  SwipeRefreshLayout.OnRefreshListener{
-   ImageView backIv;
-   RecyclerView recyclerView;
-   Context context;
+public class ActivityAllBatch extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
+    ImageView backIv;
+    RecyclerView recyclerView;
+    Context context;
     SharedPref sharedPref;
     static String checkLanguage = "";
     CustomSmallText subCatName;
     int pageStart = 0, pageEnd = 6;
-    String searchTag="";
+    String searchTag = "";
     boolean isLoading = false;
     static String subcatId;
     ImageView noResultIv;
     EditText searchBarEditText;
-    String stuId="";
+    String stuId = "";
     private SwipeRefreshLayout swipeRefreshLayout;
     ArrayList<ModelCatSubCat.batchData.SubCategory.BatchData> listBatch;
     AdapterAllBatch adapterCatSubCat;
-    boolean isFirst=true;
+    boolean isFirst = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         languageDynamic();
         setContentView(R.layout.activity_all_batch);
-        context=ActivityAllBatch.this;
+        context = ActivityAllBatch.this;
         sharedPref = SharedPref.getInstance(context);
         init();
     }
+
     void languageDynamic() {
-
-
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_CHECKLANGUAGE)
                 .build().getAsString(new StringRequestListener() {
             @Override
             public void onResponse(String response) {
-
-
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if ("true".equalsIgnoreCase(jsonObject.getString("status"))) {
@@ -138,15 +135,12 @@ public class ActivityAllBatch extends BaseActivity implements  SwipeRefreshLayou
 
             }
         });
-
-
     }
-    void init(){
+
+    void init() {
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
         swipeRefreshLayout.setColorSchemeColors(Color.RED, Color.BLUE, Color.GREEN);
         swipeRefreshLayout.setOnRefreshListener(this);
-
-
 
         searchBarEditText = findViewById(R.id.searchBarEditText);
         searchBarEditText.addTextChangedListener(new TextWatcher() {
@@ -158,21 +152,21 @@ public class ActivityAllBatch extends BaseActivity implements  SwipeRefreshLayou
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() > 2) {
-                    searchTag =s.toString();
+                    searchTag = s.toString();
                     apiCall();
                 }
-                if(!isFirst){
-                if(s.length() <= 0){
-                    pageStart=0;
-                    pageEnd=6;
-                    searchTag="";
-                    apiCall();
+                if (!isFirst) {
+                    if (s.length() <= 0) {
+                        pageStart = 0;
+                        pageEnd = 6;
+                        searchTag = "";
+                        apiCall();
 
-                }}else{
+                    }
+                } else {
 
-                    isFirst=false;
+                    isFirst = false;
                 }
-
             }
 
             @Override
@@ -180,18 +174,18 @@ public class ActivityAllBatch extends BaseActivity implements  SwipeRefreshLayou
 
             }
         });
-        recyclerView=findViewById(R.id.recyclerView);
-        subCatName=findViewById(R.id.subCatName);
-        noResultIv=findViewById(R.id.noResultIv);
-        if(getIntent().hasExtra("subcatname")){
+        recyclerView = findViewById(R.id.recyclerView);
+        subCatName = findViewById(R.id.subCatName);
+        noResultIv = findViewById(R.id.noResultIv);
+        if (getIntent().hasExtra("subcatname")) {
 
-        subCatName.setText(getIntent().getStringExtra("subcatname"));
-            subcatId=getIntent().getStringExtra("subcatId");
-            stuId=getIntent().getStringExtra("stuId");
+            subCatName.setText(getIntent().getStringExtra("subcatname"));
+            subcatId = getIntent().getStringExtra("subcatId");
+            stuId = getIntent().getStringExtra("stuId");
 
 
         }
-        backIv=findViewById(R.id.backIv);
+        backIv = findViewById(R.id.backIv);
         backIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,73 +198,67 @@ public class ActivityAllBatch extends BaseActivity implements  SwipeRefreshLayou
 
     }
 
-    void apiCall(){
+    void apiCall() {
 
-        if(!searchTag.isEmpty()){
-            pageStart=0;
-            pageEnd=1000;
+        if (!searchTag.isEmpty()) {
+            pageStart = 0;
+            pageEnd = 1000;
         }
-     if(subcatId.equalsIgnoreCase("0")){
-    subcatId="other";
-       }
+        if (subcatId.equalsIgnoreCase("0")) {
+            subcatId = "other";
+        }
 
         AndroidNetworking.get(AppConsts.BASE_URL + AppConsts.API_get_all_data)
                 .addPathParameter(AppConsts.START, "" + pageStart)
                 .addPathParameter(AppConsts.LENGTH, "" + pageEnd)
                 .addPathParameter(AppConsts.SEARCH, searchTag)
-                .addPathParameter("subcat", ""+subcatId)
-                .addPathParameter(AppConsts.STUDENT_ID, "" +stuId)
+                .addPathParameter("subcat", "" + subcatId)
+                .addPathParameter(AppConsts.STUDENT_ID, "" + stuId)
                 .build().getAsObject(ModelCatSubCat.class, new ParsedRequestListener<ModelCatSubCat>() {
             @Override
             public void onResponse(ModelCatSubCat response) {
-
                 swipeRefreshLayout.setRefreshing(false);
                 ProjectUtils.pauseProgressDialog();
-try{
-                if (response.getStatus().equalsIgnoreCase("true")) {
+                try {
+                    if (response.getStatus().equalsIgnoreCase("true")) {
+                        noResultIv.setVisibility(View.GONE);
 
-                    noResultIv.setVisibility(View.GONE);
+                        for (int i = 0; i < response.getBatchData().size(); i++) {
+                            if (response.getBatchData().get(i).getSubcategory().size() > 0) {
+                                if (pageStart == 0) {
+                                    isLoading = false;
+                                    listBatch = new ArrayList<>();
+                                    listBatch = response.getBatchData().get(i).getSubcategory().get(0).getBatchData();
+                                    initAdapter();
+                                    initScrollListener();
+                                } else {
+                                    isLoading = false;
+                                    listBatch.addAll(response.getBatchData().get(i).getSubcategory().get(0).getBatchData());
+                                    if (response.getBatchData().get(i).getSubcategory().get(0).getBatchData().size() < 1) {
+                                        Toast.makeText(context, getResources().getString(R.string.NoMoreCoursesfound), Toast.LENGTH_SHORT).show();
 
+                                    }
+                                    adapterCatSubCat.notifyDataSetChanged();
 
+                                }
 
-                 for(int i=0;i< response.getBatchData().size();i++){
-                    if(response.getBatchData().get(i).getSubcategory().size() > 0){
-
-                        if(pageStart==0){
-                            isLoading=false;
-                            listBatch=new ArrayList<>();
-                            listBatch=response.getBatchData().get(i).getSubcategory().get(0).getBatchData();
-                            initAdapter();
-                            initScrollListener();
-                        }else{
-                            isLoading=false;
-                            listBatch.addAll(response.getBatchData().get(i).getSubcategory().get(0).getBatchData());
-                            if(response.getBatchData().get(i).getSubcategory().get(0).getBatchData().size() < 1)
-                            {
-                                Toast.makeText(context, getResources().getString(R.string.NoMoreCoursesfound), Toast.LENGTH_SHORT).show();
 
                             }
-                            adapterCatSubCat.notifyDataSetChanged();
-
                         }
 
-
+                        if (listBatch.size() < 1) {
+                            recyclerView.setVisibility(View.GONE);
+                            noResultIv.setVisibility(View.VISIBLE);
+                            //  searchBarEditText.clearFocus();
+                            //hideKeyboard(ActivityAllBatch.this);
+                        }
+                    } else {
+                        recyclerView.setVisibility(View.GONE);
+                        noResultIv.setVisibility(View.VISIBLE);
                     }
-    }
+                } catch (Exception e) {
 
-    if(listBatch.size() < 1){
-        recyclerView.setVisibility(View.GONE);
-        noResultIv.setVisibility(View.VISIBLE);
-      //  searchBarEditText.clearFocus();
-       //hideKeyboard(ActivityAllBatch.this);
-    }
-                } else {
-                    recyclerView.setVisibility(View.GONE);
-                    noResultIv.setVisibility(View.VISIBLE);
                 }
-}catch (Exception e){
-
-}
             }
 
             @Override
@@ -281,19 +269,13 @@ try{
 
             }
         });
-
-
-
-
     }
 
 
     private void initAdapter() {
-
-        recyclerView.setLayoutManager(new GridLayoutManager(context,2));
-        adapterCatSubCat = new AdapterAllBatch(listBatch, getApplicationContext(),""+stuId);
+        recyclerView.setLayoutManager(new GridLayoutManager(context, 2));
+        adapterCatSubCat = new AdapterAllBatch(listBatch, getApplicationContext(), "" + stuId);
         recyclerView.setAdapter(adapterCatSubCat);
-
     }
 
     private void initScrollListener() {
@@ -343,9 +325,6 @@ try{
                     //
                     currentSize++;
                 }
-
-
-
             }
         }, 2000);
 
@@ -366,9 +345,9 @@ try{
     @Override
     public void onRefresh() {
         if (ProjectUtils.checkConnection(context)) {
-            pageStart=0;
-            pageEnd=6;
-            searchTag="";
+            pageStart = 0;
+            pageEnd = 6;
+            searchTag = "";
             apiCall();
         } else {
             Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
