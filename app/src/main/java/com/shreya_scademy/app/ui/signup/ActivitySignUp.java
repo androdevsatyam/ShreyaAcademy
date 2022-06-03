@@ -97,6 +97,14 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
         etUserEmail = findViewById(R.id.etUserEmail);
         btnSignup = findViewById(R.id.btnSignup);
         btnSignup.setOnClickListener(this);
+
+        try {
+            PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            versionCode = String.valueOf(pInfo.versionCode);
+        }catch (Exception e){
+            Log.d("ACtivity",""+e.getMessage());
+        }
+
         if (getIntent().hasExtra("amount")) {
             amount = getIntent().getStringExtra("amount");
             batchId = getIntent().getStringExtra("BatchId");
@@ -189,7 +197,51 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                                     if (getIntent().hasExtra("login")) {
                                         if (getIntent().getStringExtra("login").equalsIgnoreCase("Withoutbatch")) {
                                             ProjectUtils.showProgressDialog(context, true, getResources().getString(R.string.Loading___));
-                                            AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_STUDENT_REGISTRATION)
+
+                                            AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_GOOGLE_LOGIN)
+                                                    .addBodyParameter(AppConsts.EMAIL, "" + account.getEmail())
+                                                    .addBodyParameter(AppConsts.FIRSTNAME, "" +account.getGivenName())
+                                                    .addBodyParameter(AppConsts.LASTNAME, "")
+                                                    .addBodyParameter(AppConsts.NAME, "" +account.getDisplayName())
+                                                    .addBodyParameter(AppConsts.GENDER, "" )
+                                                    .addBodyParameter(AppConsts.PICTURE, "" + account.getPhotoUrl())
+                                                    .addBodyParameter(AppConsts.LOCATION, "")
+                                                    .build()
+                                                    .getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
+                                                        @Override
+                                                        public void onResponse(ModelLogin response) {
+                                                            if (response.getStatus().equalsIgnoreCase("true")) {
+                                                                sharedPref.setUser(AppConsts.STUDENT_DATA, response);
+                                                                sharedPref.setBooleanValue(IS_REGISTER, true);
+                                                                modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
+                                                                Intent intent = new Intent(context, ActivityPaymentGateway.class).putExtra("login", "Withoutbatch");
+                                                                intent.putExtra("name", "" + response.getStudentData().getFullName().isEmpty());
+                                                                intent.putExtra("email", "" + response.getStudentData().getUserEmail());
+                                                                intent.putExtra("mobile", "" + response.getStudentData().getMobile());
+                                                                intent.putExtra("token", "" + task.getResult().getToken());
+                                                                intent.putExtra("versionCode", "" + versionCode);
+                                                                startActivity(intent);
+                                                                ProjectUtils.pauseProgressDialog();
+                                                                Toast.makeText(context, "" + response.getMsg(), Toast.LENGTH_LONG).show();
+
+
+                                                            } else {
+                                                                googleSignInTask.signOut();
+                                                                ProjectUtils.pauseProgressDialog();
+                                                                Toast.makeText(context, "" + response.getMsg()+"\nUse Another Email or Login", Toast.LENGTH_LONG).show();
+                                                            }
+
+                                                        }
+
+                                                        @Override
+                                                        public void onError(ANError anError) {
+                                                            ProjectUtils.pauseProgressDialog();
+                                                            Log.v("saloni123", "saloni  " + anError);
+                                                        }
+                                                    });
+
+
+                                          /*  AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_STUDENT_REGISTRATION)
                                                     .addBodyParameter(AppConsts.NAME, "" +account.getDisplayName())
                                                     .addBodyParameter(AppConsts.EMAIL, "" + account.getEmail())
                                                     .addBodyParameter(AppConsts.MOBILE, "" + "0000000000")
@@ -200,7 +252,6 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                                                         @Override
                                                         public void onResponse(ModelLogin response) {
                                                             if (response.getStatus().equalsIgnoreCase("true")) {
-
                                                                 sharedPref.setUser(AppConsts.STUDENT_DATA, response);
                                                                 sharedPref.setBooleanValue(IS_REGISTER, true);
                                                                 modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
@@ -227,7 +278,7 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                                                             Log.v("saloni123", "saloni  " + anError);
                                                         }
                                                     });
-                                        }
+                                        */}
                                     } else {
                                         Log.v("saloni1234", "==================goes right");
                                         apiSignUp(task.getResult().getToken());
@@ -282,9 +333,6 @@ public class ActivitySignUp extends BaseActivity implements View.OnClickListener
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             if (!jsonObject.getString(AppConsts.ISEMAILEXIST).equalsIgnoreCase(AppConsts.TRUE)) {
-
-                                PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
-                                versionCode = String.valueOf(pInfo.versionCode);
                                 Intent intent = new Intent(context, ActivityPaymentGateway.class);
                                 intent.putExtra("versionCode", "" + versionCode);
                                 intent.putExtra("paymentType", "" + paymentType);

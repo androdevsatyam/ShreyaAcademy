@@ -30,12 +30,9 @@ import java.util.Locale;
 
 public class BaseActivity extends BaseLockActivity {
 
-
     Context mContext;
     ModelLogin modelLogin;
     SharedPref sharedPref;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

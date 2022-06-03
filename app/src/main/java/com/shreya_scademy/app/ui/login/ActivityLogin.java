@@ -12,6 +12,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -43,10 +44,12 @@ import com.google.firebase.iid.InstanceIdResult;
 import com.shreya_scademy.app.R;
 import com.shreya_scademy.app.databinding.ActivityLoginBinding;
 import com.shreya_scademy.app.model.modellogin.ModelLogin;
+import com.shreya_scademy.app.ui.base.BaseActivity;
 import com.shreya_scademy.app.ui.batch.ActivityBatch;
 import com.shreya_scademy.app.ui.forgotpassword.ActivityForgotPassword;
 import com.shreya_scademy.app.ui.mobilephone.PhoneNumberLoginActivity;
 import com.shreya_scademy.app.ui.multibatch.ActivityMultiBatchHome;
+import com.shreya_scademy.app.ui.paymentGateway.ActivityPaymentGateway;
 import com.shreya_scademy.app.ui.signup.ActivitySignUp;
 import com.shreya_scademy.app.utils.AppConsts;
 import com.shreya_scademy.app.utils.ProjectUtils;
@@ -62,7 +65,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class ActivityLogin extends AppCompatActivity implements View.OnClickListener {
+public class ActivityLogin extends BaseActivity implements View.OnClickListener {
 
     RelativeLayout btLogin;
     Context mContext;
@@ -186,7 +189,59 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                                         return;
                                     }
                                     if (ProjectUtils.checkConnection(mContext)) {
-                                        loginApi(task.getResult().getToken());
+//                                        loginApi(task.getResult().getToken());
+                                        AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_GOOGLE_LOGIN)
+                                                .addBodyParameter(AppConsts.EMAIL, "" + account.getEmail())
+                                                .addBodyParameter(AppConsts.FIRSTNAME, "" +account.getGivenName())
+                                                .addBodyParameter(AppConsts.LASTNAME, "")
+                                                .addBodyParameter(AppConsts.NAME, "" +account.getDisplayName())
+                                                .addBodyParameter(AppConsts.GENDER, "" )
+                                                .addBodyParameter(AppConsts.PICTURE, "" + account.getPhotoUrl())
+                                                .addBodyParameter(AppConsts.LOCATION, "")
+                                                .build()
+                                                .getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
+                                                    @Override
+                                                    public void onResponse(ModelLogin response) {
+                                                        if (response.getStatus().equalsIgnoreCase("true")) {
+                                                            tvContactAdmin.setVisibility(View.GONE);
+                                                            sharedPref.setUser(AppConsts.STUDENT_DATA, response);
+                                                            sharedPref.setBooleanValue(IS_REGISTER, true);
+                                                            etUserName.setText("");
+                                                            etPassword.setText("");
+                                                            Calendar cal = Calendar.getInstance();
+                                                            String format = new SimpleDateFormat("E, MMM d, yyyy").format(cal.getTime());
+                                                            sharedPref.setDate("date", format);
+                                                            startActivity(new Intent(mContext, ActivityMultiBatchHome.class).putExtra(AppConsts.IS_SPLASH, "true"));
+                                                            modelLogin=response;
+                                                            infoUpdate();
+                                                            /* sharedPref.setUser(AppConsts.STUDENT_DATA, response);
+                                                            sharedPref.setBooleanValue(IS_REGISTER, true);
+                                                            modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
+                                                            Intent intent = new Intent(ActivityLogin.this, ActivityPaymentGateway.class).putExtra("login", "Withoutbatch");
+                                                            intent.putExtra("name", "" + (response.getStudentData().getFullName().isEmpty()));
+                                                            intent.putExtra("email", "" + response.getStudentData().getUserEmail());
+                                                            intent.putExtra("mobile", "" + response.getStudentData().getMobile());
+                                                            intent.putExtra("token", "" + task.getResult().getToken());
+                                                            intent.putExtra("versionCode", "" + versionCode);
+                                                            startActivity(intent);
+                                                            ProjectUtils.pauseProgressDialog();
+                                                            Toast.makeText(ActivityLogin.this, "" + response.getMsg(), Toast.LENGTH_LONG).show();
+*/
+
+                                                        } else {
+                                                            googleSignInTask.signOut();
+                                                            ProjectUtils.pauseProgressDialog();
+                                                            Toast.makeText(ActivityLogin.this, "" + response.getMsg()+"\nUse Another Email or Login", Toast.LENGTH_LONG).show();
+                                                        }
+
+                                                    }
+
+                                                    @Override
+                                                    public void onError(ANError anError) {
+                                                        ProjectUtils.pauseProgressDialog();
+                                                        Log.v("saloni123", "saloni  " + anError);
+                                                    }
+                                                });
                                     } else {
                                         Toast.makeText(mContext, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
                                     }
@@ -240,7 +295,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                 .build().getAsString(new StringRequestListener() {
             @Override
             public void onResponse(String response) {
-
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if ("true".equalsIgnoreCase(jsonObject.getString("status"))) {
@@ -337,7 +391,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                             infoUpdate();
 
                         } else {
-
                             tvContactAdmin.setVisibility(View.VISIBLE);
                             String string = "";
                             string = " " + response.getMsg();
@@ -440,7 +493,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     public void onBackPressed() {
         exitAppDialog();
     }
-
 
     void infoUpdate() {
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);

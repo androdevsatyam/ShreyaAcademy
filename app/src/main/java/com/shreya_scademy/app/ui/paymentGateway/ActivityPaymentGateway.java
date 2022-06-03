@@ -207,10 +207,7 @@ public class ActivityPaymentGateway extends BaseActivity implements View.OnClick
             }
             if (getIntent().hasExtra("paymentdata")) {
                 initial();
-
-
             }
-
 
             modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
         }
@@ -367,7 +364,7 @@ public class ActivityPaymentGateway extends BaseActivity implements View.OnClick
 
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
         tvEnrollment.setText("" + getResources().getString(R.string.EnrollmentId) + "   " + modelLogin.getStudentData().getEnrollmentId());
-        tvPassword.setText(getResources().getString(R.string.Password) + "    " + modelLogin.getStudentData().getPassword());
+        tvPassword.setText(getResources().getString(R.string.Password) + "    " + modelLogin.getStudentData().getPassword()+modelLogin.getStudentData().getEnrollmentId());
 
         llLoginDetailsForNewStudents.setVisibility(View.VISIBLE);
         llPayment.setVisibility(View.GONE);
@@ -381,8 +378,6 @@ public class ActivityPaymentGateway extends BaseActivity implements View.OnClick
 
     @Override
     protected void onDestroy() {
-
-
         super.onDestroy();
     }
 

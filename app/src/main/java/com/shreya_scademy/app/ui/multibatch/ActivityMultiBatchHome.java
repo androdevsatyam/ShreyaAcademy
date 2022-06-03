@@ -83,7 +83,7 @@ public class ActivityMultiBatchHome extends BaseActivity {
                             getBaseContext().getResources().getDisplayMetrics());
                 }
 
-                if (modelLogin.getStudentData().getLanguageName().equalsIgnoreCase("french")) {
+               else if (modelLogin.getStudentData().getLanguageName().equalsIgnoreCase("french")) {
                     String languageToLoad = "fr"; // your language
                     Locale locale = new Locale(languageToLoad);
                     Locale.setDefault(locale);
@@ -94,7 +94,7 @@ public class ActivityMultiBatchHome extends BaseActivity {
 
 
                 }
-                if (modelLogin.getStudentData().getLanguageName().equalsIgnoreCase("english")) {
+               else if (modelLogin.getStudentData().getLanguageName().equalsIgnoreCase("english")) {
                     String languageToLoad = "en"; // you     gbr language
                     Locale locale = new Locale(languageToLoad);
                     Locale.setDefault(locale);
@@ -273,7 +273,6 @@ public class ActivityMultiBatchHome extends BaseActivity {
         });
     }
 
-
     private void initAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
         rlBatchRecomm.setLayoutManager(linearLayoutManager);
@@ -305,14 +304,11 @@ public class ActivityMultiBatchHome extends BaseActivity {
                 }
             }
         });
-
-
     }
 
     private void loadMore() {
         catSubList.add(null);
         adapterCat.notifyItemInserted(catSubList.size() - 1);
-
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

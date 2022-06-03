@@ -42,6 +42,7 @@ public interface AppConsts {
     String API_CHANGE_BATCH = "home/changeMyBatch";
     String API_VIEW_SUBJECT_LIST = "home/view_subject_list";
     String API_STUDENT_REGISTRATION = "home/student_registration";
+    String API_GOOGLE_LOGIN = "Home/social_login";
     String API_HOMEGENERAL_SETTING = "home/general_setting";
     String API_DOUBTS_CLASS_ASK = "home/doubts_class_ask";
     String API_PAY_BATCH_FEE = "home/pay_batch_fee";
@@ -77,6 +78,11 @@ public interface AppConsts {
     String STATUS = "status";
     String VACANCY_ID = "vacancy_id";
     String STUDENT_ID = "student_id";
+    String FIRSTNAME = "first_name";
+    String LASTNAME = "last_name";
+    String GENDER = "gender";
+    String PICTURE = "picture";
+    String LOCATION = "location";
     String NAME = "name";
     String MONTH = "month";
     String AMOUNT = "amount";

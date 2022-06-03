@@ -2,6 +2,7 @@ package com.shreya_scademy.app;
 
 import android.app.Application;
 import android.util.Log;
+import android.view.WindowManager;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;

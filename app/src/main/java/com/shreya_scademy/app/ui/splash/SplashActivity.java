@@ -108,7 +108,6 @@ public class SplashActivity extends BaseLockActivity {
             }
         });
 
-
         if (!ProjectUtils.checkConnection(mContext)) {
             Toast.makeText(mContext, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
             progressBar.setVisibility(View.GONE);
@@ -117,9 +116,7 @@ public class SplashActivity extends BaseLockActivity {
         languageDynamic();
     }
 
-
     void languageDynamic() {
-
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_CHECKLANGUAGE)
                 .build().getAsString(new StringRequestListener() {
             @Override
@@ -150,51 +147,38 @@ public class SplashActivity extends BaseLockActivity {
                             config.locale = locale;
                             getBaseContext().getResources().updateConfiguration(config,
                                     getBaseContext().getResources().getDisplayMetrics());
-
-
                         }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
 
             @Override
             public void onError(ANError anError) {
-
-
             }
         });
-
-
     }
 
     Runnable mTask = new Runnable() {
         @Override
         public void run() {
-
             checkLogin();
-
         }
     };
 
 
-    private void checkLogin() {
-
+    private void
+    checkLogin() {
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
                     @Override
                     public void onComplete(Task<InstanceIdResult> task) {
                         if (!task.isSuccessful()) {
-
                             return;
                         }
-
                         if (modelLogin != null) {
                             if (modelLogin.getStudentData() != null) {
-
-
                                 AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.CHECK_LOGIN)
                                         .addBodyParameter(AppConsts.STUDENT_ID, modelLogin.getStudentData().getStudentId())
                                         .addBodyParameter(AppConsts.BATCH_ID, modelLogin.getStudentData().getBatchId())
@@ -254,8 +238,6 @@ public class SplashActivity extends BaseLockActivity {
 
                     }
                 });
-
-
     }
 
     private void checkStatus() {
